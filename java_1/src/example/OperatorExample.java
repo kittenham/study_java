@@ -3,6 +3,8 @@ package example;
 public class OperatorExample {
 	public static void main(String[] args) {
 		//245678초를 일시분초 형식으로 변환하여 출력하세요.
+		int sec=245678;
+		
 
 
 		System.out.println("===============================================");

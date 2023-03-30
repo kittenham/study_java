@@ -26,11 +26,9 @@ public class VariableExample {
 		String name = "홍길동";
 		int kor=89, eng=93, math=95;
 		int tot=(kor+eng+math);
-		double ave=tot/3.0;
+		double ave=(int)(tot/3.0*100)/100.0;
 		System.out.println("이름 = "+name+", 총점 = "+tot+", 평균 = "+ave);
 		
-		System.out.println("number(내림) = "+(int)(number*100)/100.0);
-
 
 
 		System.out.println("======================================================");
