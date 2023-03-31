@@ -35,7 +35,6 @@ public class OperatorExample {
 		System.out.println("지불금액 : "+all+"원");
 
 
-
 		System.out.println("===============================================");
 	}
 }
