@@ -46,8 +46,8 @@ public class DataTypeApp {
 		System.out.println("실수값(4Byte) = "+12.3F);	//실수값F >> 4Byte 실수형 리터럴(FloatType)
 		System.out.println("실수값(8Byte) = "+12.3);	//실수값 >> 8Byte 실수형 리터럴(DoubleType)
 		
-		//println() 메소드는 실수값이 아주 작거나 큰 경우 지수형태로 변환하여 출력
-		System.out.println("실수값(8Byte) = "+0.0000000123);	//1.23*10의-8승
+		//println() 메소드는 실수값이 아주 작거나 큰 경우 지수형태로 변환하여 출력(지수형은 무조건 실수형)
+		System.out.println("실수값(8Byte) = "+0.0000000123);	//1.23*10의-8승 (8byte)
 		System.out.println("실수값(8Byte) = "+1.23E+10);	//1.23*10의10승
 		
 		//실수값을 표현하기 위한 자료형 - float(4Byte), double(8Byte)

@@ -4,11 +4,13 @@ package basic;
 //=> 자동 형변환(JVM이 실행할 때 해줌), 강제 형변환(프로그래머가 함)
 public class TypeCastApp {
 	public static void main(String[] args) {
-		//자동 형변환 : 자료형이 다른 값을 연산하기 위한 "JVM이" 자료형을 일시적으로 변환하는것.
+		//자동 형변환(promotion) : 자료형이 다른 값을 연산하기 위한 "JVM이" 자료형을 일시적으로 변환하는것.
 		//10+13.5 => 정수값과 실수값의 합이기 때문에 원칙적으로는 연산 안 됨. 그래서 자동형변환을 통해 연산 되어질 수 있도록함.
 		//>> 표현의 범위가 작은 자료형의 값이 큰 자료형의 값으로 형변환되어 연산처리. (단, boolean빼고. 얘는 연산못함. 나머지 7개를 사용함)
 		// 크기 : byte < short <char < int < long < float < double
-		System.out.println("결과 = "+(3+1.5)); 		// 정수3이 3.0이라는 실수로 자동 형변환됨.(실수가 정수보다 범위가 크니까)
+		System.out.println("결과 = "+(3+1.5)); 		
+				// 정수3이 3.0이라는 실수로 자동 형변환됨.(실수가 정수보다 범위가 크니까)
+				//3(int)+1.5(double) >> 3.0(double)+1.5(double) >> 4.5(double)
 		
 		double su = 10;		//10이 자동적으로 10.0으로 변환되어 저장. = 이것도 자동 형변환
 		System.out.println("su = "+su);
@@ -45,9 +47,10 @@ public class TypeCastApp {
 		
 		
 		
-		//강제 형변환 : 프로그래머가 Cast 연산자를 사용하여 원하는 자료형의 값을 일시적으로 변환하여 명령을 작성하는 방법 
+		//강제 형변환(casting) : 프로그래머가 Cast 연산자를 사용하여 원하는 자료형의 값을 일시적으로 변환하여 명령을 작성하는 방법 
 		//입력 방법: (자료형)값
 		//크기 상관 없음
+		//보통은 큰 허용범위타입을 작은 허용범위타입으로 변환할때 사용
 		
 		//int num=12.3;		//error! 절대X
 		int num = (int)12.3;		// (int)12.3 : 실수12.3이 정수 12로 강제로 변환시킴.
@@ -83,6 +86,16 @@ public class TypeCastApp {
 		System.out.println("number(반올림) = "+(int)(number*100+0.5)/100.0);
 		System.out.println("number(올림) = "+(int)(number*100+0.9)/100.0);
 		
+		//<응용>
+		//소수점 한자리 위치까지만 출력되도록 명령 작성
+		System.out.println("number(내림) = "+(int)(number*10)/10.0);
+		
+		//소수점 2자리 위치까지만 출력되도록 명령 작성
+		System.out.println("number(내림) = "+(int)(number*100)/100.0);
+
+		
+		//소수점 3자리 위치까지만 출력되도록 명령 작성
+		System.out.println("number(내림) = "+(int)(number*1000)/1000.0);
 		
 	}
 }

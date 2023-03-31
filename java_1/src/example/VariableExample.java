@@ -4,18 +4,26 @@ public class VariableExample {
 	public static void main(String[] args) {
 		//가로의 길이가 7이고 세로의 길이가 10인 사각형의 넓이를 계산하여 출력하세요.
 
+		int garo=7, sero=10;
+		int nulbe=garo*sero;
+		System.out.println("사각형의 넓이 = "+nulbe);
 
 		System.out.println("======================================================");
 		//높이가 9이고 밑변의 길이가 7인 삼각형의 넓이를 계산하여 출력하세요.
 
-		int shv=9, alx=7;
-		System.out.println("삼각형의 넓이 = "+(shv*alx));
+		int len=9, base=7;
+		double sjfq=((double)len*base/2.0);
+		System.out.println("삼각형의 넓이 = "+(len*base/2));
+		System.out.println("삼각형의 넓이 = "+(len*base/2.0));
+		System.out.println("삼각형의 넓이 = "+sjfq);
+		
 
 		System.out.println("======================================================");
 		//10명의 전체 몸무게가 759Kg인 경우 평균 몸무게를 계산하여 출력하세요.
 		
-		int aha=759, aud=10;
-		System.out.println("평균 몸무게 ="+(aha/aud));
+		int totwei=759, man=10;
+		double avewei=(double)totwei/man;
+		System.out.println("평균 몸무게 ="+avewei+"kg");
 
 
 		System.out.println("======================================================");
@@ -26,8 +34,8 @@ public class VariableExample {
 		String name = "홍길동";
 		int kor=89, eng=93, math=95;
 		int tot=(kor+eng+math);
-		double ave=(int)(tot/3.0*100)/100.0;
-		System.out.println("이름 = "+name+", 총점 = "+tot+", 평균 = "+ave);
+		double ave=tot/3.0;		//출력할 때 절삭하라고 했으므로 변수는 놔두고 출력시에 절삭해주기.
+		System.out.println("이름 = "+name+", 총점 = "+tot+", 평균 = "+(int)(ave/3.*10)/10/0);
 		
 
 
