@@ -30,15 +30,17 @@ public class ForExample {
 		for(int i=3;i<=100;i++) {
 			if(i%3==0) {
 				sum+=i;
-			}		
+			}
+		}
 			
 		for(int j=5;j<=100;j++) {
 			if(j%5==0) {
 				sum2+=j;
 			}
-		}			
-			
-		}
+		}	
+		
+		System.out.println("3의배수 합계 = "+sum+", 5의배수 합계 = "+sum2);
+		System.out.println("3의배수 합계-5의배수 합계 = "+(sum-sum2));
 		
 		
 		
