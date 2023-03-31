@@ -35,7 +35,7 @@ public class VariableExample {
 		int kor=89, eng=93, math=95;
 		int tot=(kor+eng+math);
 		double ave=tot/3.0;		//출력할 때 절삭하라고 했으므로 변수는 놔두고 출력시에 절삭해주기.
-		System.out.println("이름 = "+name+", 총점 = "+tot+", 평균 = "+(int)(ave/3.*10)/10/0);
+		System.out.println("이름 = "+name+", 총점 = "+tot+", 평균 = "+(int)(ave/3.*10)/10.0);
 
 
 		System.out.println("======================================================");
