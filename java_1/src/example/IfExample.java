@@ -110,48 +110,49 @@ public class IfExample {
 	//<풀이>
 		
 		String name2="홍길동";
-		int kor2=89, eng2=93, math2=95;
+		int kor2=89, eng2=193, math2=95;
 		int total2=(kor2+eng2+math2);
 		double ave2 = (total2/3.0);
-		
+		/*
 		if((kor2<0||kor2>100)||(eng2<0||eng2>100)||(math2<0||math2>100)) {
 			//과목 점수 입력을 받자마자 정상인지 아닌지 판단 할 수 있도록 grade if문 전에 입력해줘야함.
 			//친절하지 못함. 과목을 통째로 검수했기 때문.=> 사용자에게 친절한 화면을 제공하려면 과목을 각각 검수해야함.
 		
 		System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 점수가 입력되었으므로 프로그램을 강제 종료합니다.");
 		System.exit(0);
-	}
+		}
 		//=>이 경우에는 과목 각각을 검수하지만, 국어+수학이 잘못된 점수였을때 국어만 검사후 프로그램이 종료되어 수학은 검수를 못하는 단점이 있음.
 		//따라서, 검증결과를 저장하기 위한 변수 지정의 필요가 있음.
 		if(kor2<0||kor2>100) {
 		System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 국어점수가 입력되었으므로 프로그램을 강제 종료합니다.");
 		System.exit(0);
-	}
+		}
 		if(eng2<0||eng2>100) {
 		System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 영어점수가 입력되었으므로 프로그램을 강제 종료합니다.");
 		System.exit(0);
-	}
+		}
 		if(math2<0||math2>100) {
 		System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 수학점수가 입력되었으므로 프로그램을 강제 종료합니다.");
 		System.exit(0);
-	}
+		}
+	}*/
 		
 		//검증 결과를 저장하기 위한 변수를 지정(boolean)-> flase:검증성공, true:검증실패 (내가 약속하는것)
-		boolean vaild=false;
+		boolean vaild=false;		//boolean : 참과 거짓값 만을 가질 수 있는 논리적인 데이터 유형
 		
 		if(kor2<0||kor2>100) {
 			System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 국어점수가 입력되었으므로 프로그램을 강제 종료합니다.");
-			System.exit(0);
+			//System.exit(0);
 			vaild=true;
 		}
 			if(eng2<0||eng2>100) {
 			System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 영어점수가 입력되었으므로 프로그램을 강제 종료합니다.");
-			System.exit(0);
+			//System.exit(0);
 			vaild=true;
 		}
 			if(math2<0||math2>100) {
 			System.out.println("[에러] 0~100 범위의 벗어난 비정상적인 수학점수가 입력되었으므로 프로그램을 강제 종료합니다.");
-			System.exit(0);
+			//System.exit(0);
 			vaild=true;
 		}
 		
