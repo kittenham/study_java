@@ -12,15 +12,16 @@ public class TotalTwoExample {
 
 		Scanner scanner = new Scanner(System.in);
 
-        	int sum=0, dan=7;
-
-        	System.out.print("단 입력[2~9] >> ");
-        	String input = scanner.nextLine();
-        	int num = Integer.parseInt(input);
-        	for(int i=1;i<=9;i++) {
-            		sum = dan * i;
-            		System.out.println(dan + " * " + i + " = " + sum);
+       		int sum =0;
+        	while(num!=0) {
+            		System.out.println("정수값 입력[0:종료] >> ");
+            		String input = scanner.nextLine();
+            		int num=scanner.nextInt(input);
+            		sum+=num;
         	}
+        	System.out.println("[결과]합계 = "+sum);
+
 	}
 }
 
+//
