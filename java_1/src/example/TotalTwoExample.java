@@ -10,6 +10,17 @@ package example;
 public class TotalTwoExample {
 	public static void main(String[] args) {
 
+		Scanner scanner = new Scanner(System.in);
+
+        	int sum=0, dan=7;
+
+        	System.out.print("단 입력[2~9] >> ");
+        	String input = scanner.nextLine();
+        	int num = Integer.parseInt(input);
+        	for(int i=1;i<=9;i++) {
+            		sum = dan * i;
+            		System.out.println(dan + " * " + i + " = " + sum);
+        	}
 	}
 }
 
