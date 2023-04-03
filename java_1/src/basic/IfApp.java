@@ -41,7 +41,6 @@ public class IfApp {
 			System.out.println("[결과]점수가 60점 미만이므로 <불합격>입니다.");
 		}
 		
-		System.out.println("===========================================");
 		
 	//if-else문
 		if(score>=60) {
@@ -51,13 +50,18 @@ public class IfApp {
 		}
 
 		
+		System.out.println("===========================================");
+
+		
 		//변수값을 홀수 또는 짝수로 구분하여 출력하는 프로그램 작성
+		// => X % Y == 0 >> X는 Y의 배수 - 배수 표현 조건식
+		
 		int num=9;
 		/*
 		if(num%2 !=0) {
 			System.out.println("홀수");
 		}
-		if((num%2 ==0) {
+		if((num%2 == 0) {
 			System.out.println("짝수");
 		}
 		*/
@@ -67,6 +71,8 @@ public class IfApp {
 		
 		}
 
+		
+		
 		System.out.println("===========================================");
 
 		char mun = 'O';		//영문자O
@@ -113,6 +119,7 @@ public class IfApp {
 		
 		//변수값이 0~100 범위의 유효값인지 아닌지를 구분하여 출력하는 프로그램 작성
 		//=> 입력값에 대한 유효성 검증
+		
 		if(jumsu>=0 && jumsu<=100) {
 			//System.out.println("[결과] 0~100 범위의 정상적인 점수가 입력 되었습니다.");	//바로 결과 출력
 			
@@ -136,9 +143,9 @@ public class IfApp {
 				grade = "F";
 			}
 			
-			/* 위의 if문을 간결하게 작성해보기↓
+			/* 위의 if문을 간결하게(효율적으로) 작성해보기↓
 			
-			String grade; 			//	
+			String grade; 			//	grade 문자열 선언(if문 바깥에서 선언했으므로 if문 안에서도, 밖에서도 사용가능)
 			if(jumsu>=90) {		//밖의 if문에서 100보다 작다는 조건이 나왔으므로 여기서는 jumsu<=100을 다시 쓰지 않아도 됨.
 				grade = "A";
 			}

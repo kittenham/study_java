@@ -54,11 +54,21 @@ public class ForExample {
 		//    7 * 8 = 56
 		//    7 * 9 = 63
 
+		for(int j=1;j<10;j++){
+           		 System.out.println(7+" * "+j+" = "+(7*j));
+    		}
 
 		System.out.println("=========================================");
 		//5!의 결과값을 출력하세요.(5! = 5 * 4 * 3 * 2 * 1)
 		//ex) 5! = 120
 
+		int sum3 = 1;
+       		for (int i = 5; i >= 1; i--) {
+            		sum3 = sum3 * i;
+
+        	}
+       		System.out.println("5!" + " = " + sum3);
+		
 
 		System.out.println("=========================================");
 		//두 변수에 저장된 정수값 사이의 정수들을 화면에 출력하세요.
@@ -68,12 +78,21 @@ public class ForExample {
 		//    50    51    52     53     54     55     56
 		//    57
 		int begin=36, end=57;
+		
 
+        	for(int i=36; i<=57; i++) {
+            		System.out.print(i+"\t");
+            		if(i%7==0){
+                		System.out.println("");
+            		}
 
+            	}
+		
+
+        System.out.println("");
 		System.out.println("=========================================");	
 	}
 }
-
 
 
 

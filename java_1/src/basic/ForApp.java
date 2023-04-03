@@ -9,7 +9,7 @@ public class ForApp {
 		
 		System.out.println("===========================================");
 		
-		//"Java Programming"을 화면에 5번출력
+		//"Java Programming"을 화면에 5번출력 =>유지보수의 효율성낮음(비효유적)
 		System.out.println("Java Programming");
 		System.out.println("Java Programming");
 		System.out.println("Java Programming");
@@ -103,6 +103,41 @@ public class ForApp {
 		System.out.println(begin2+"~"+end2+" 범위의 정수들의 합계 = "+sum2);
 		
 		
+		System.out.println("===========================================");
+
+		
+		for(int i=1, j=5; i<=3; i++,j--) {		//조건식은 &&, ||로 연결시켜야 함(, 쓰면X)
+			System.out.println("i = "+i+", j = "+j);
+		}
+		
+		System.out.println("===========================================");
+
+		int i=1;		//for 구문에 상관없이 계속 존재
+		
+		for(i=1; i<=4; i++) {		//for(;i<=;i++) =>로 사용 가능. 위에 int i=1로 선언했기 때문에 for문에서는 초기식 선언 안해줘도 됨.
+			System.out.println(i+"\t");	
+		}		//i 변수에 [5]가 저장된 경우 반복문 종료.
+		
+		//여기는 i=5라는 값이 저장되어 있음.(위의 for문에서 i++로 i값이 증가했기 때문)
+		
+		for(;i>=1;i--) {		//초기식 생략. 이때의 i=5.
+			System.out.println(i+"\t");
+		}
+		
+		System.out.println("===========================================");
+		
+		
+		//조건식이 생략된 경우는 무조건 참으로 처리 - 무한루프
+		for(;;) {//초기식, 조건식, 증감식 전부 생략
+			System.out.println("무한 반복되어 실행되는 명령");
+			
+		}
+		
+		System.out.println("===========================================");
+		// 위의 무한반복코드 때문에 실행되지 않는 코드가 됨.(읽어지지 않는 코드이기 때문)
+		
 	}
 }
+
+
 

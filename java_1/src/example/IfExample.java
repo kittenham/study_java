@@ -5,12 +5,35 @@ public class IfExample {
 		//변수에 저장된 문자값을 출력하세요.
 		//단, 변수에 저장된 문자값이 소문자인 경우 대문자로 변환하여 출력하세요.
 		char mun='x';
+		
+		if(mun>='a' && mun<='z') {
+                	System.out.println(Character.toUpperCase(mun));
+           	} else{
+                	System.out.println(mun);
+            }
+		
+		//<풀이>
+		//소문자와 대문자의 차이 = 32
+		mun-=32;	
+		
+		if(mun>='a' && mun<='z') {		//변수값이 영문자 소문자인 경우
+			mun-=32;		//변수값을 32 감소시키자(형변환 일어나지 X)
+							//mun=mun-32	=> 하면X
+							//mun=(char)(mun-32)	=>가능
+			
+		}
+		
 			
 		System.out.println("mun = "+mun);
 		System.out.println("============================================================");
 		//변수에 저장된 정수값이 4의 배수인지 아닌지를 구분하여 출력하세요.
 		int num=345644;
 		
+		if(num%4==0) {
+                	System.out.println(num + "은 4의 배수입니다.");
+           	} else{
+                	System.out.println(num+"은 4의 배수가 아닙니다.");
+           	}
 
 		System.out.println("============================================================");
 		//올해가 평년인지 윤년을 구분하여 출력하세요.
@@ -18,7 +41,24 @@ public class IfExample {
 		// => 위 조건을 만족하는 년도 중 100으로 나누어 나머지가 0인 경우 평년
 		// => 위 조건을 만족하는 년도 중 400으로 나누어 나머지가 0인 경우 윤년
 		int year=2023;
-
+		
+		if(year%4==0){
+			System.out.println(year+"은 윤년입니다.");
+            if(year%100==0){
+                System.out.println(year+"은 평년입니다.");
+            } else if ((year%400)==0) {
+                System.out.println(year+"은 윤년입니다.");
+            }
+        }
+		
+		
+		//<풀이>
+		if(year%4==0 && year%100!=0) {
+			System.out.println("[결과]"+year+"년은 윤년입니다.");
+		} else {
+			System.out.println("[결과]"+year+"년은 평년입니다.");
+		}
+		
 
 		System.out.println("============================================================");
 		//이름이 [홍길동]인 학생이 국어점수 89점, 영어점수 93점, 수학점수 95점을 받은 경우
