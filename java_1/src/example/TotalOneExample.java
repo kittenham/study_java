@@ -19,8 +19,8 @@ public class TotalOneExample {
             		String input = scanner.nextLine();
             		int num = Integer.parseInt(input);
             		sum+=num;
-            		System.out.println("[결과]합계 = "+sum);
         	}
+		System.out.println("[결과]합계 = "+sum);
 
 	}
 }
