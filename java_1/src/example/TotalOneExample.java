@@ -9,7 +9,18 @@ package example;
 //    [결과]합계 = 150
 public class TotalOneExample {
 	public static void main(String[] args) {
-		
+
+		Scanner scanner = new Scanner(System.in);
+
+        	int sum = 0;
+
+        	for(int i=1;i<=5;i++) {
+            		System.out.println(i + "번째 정수값 입력 >>");
+            		String input = scanner.nextLine();
+            		int num = Integer.parseInt(input);
+            		sum+=num;
+            		System.out.println("[결과]합계 = "+sum);
+        	}
 
 	}
 }
