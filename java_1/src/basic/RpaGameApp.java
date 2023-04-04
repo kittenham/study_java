@@ -28,7 +28,8 @@ public class RpaGameApp {
 				System.out.println("가위바위보[1:가위,2:바위,3:보] >> ");
 				user=scanner.nextInt();
 				if(user>=1 && user<=3) break;	//정상적인 값이 입력된 경우 반복문 종료
-				System.out.println("[에러] 가위,바위,보 중 하나를 선택하여 입력해주세요.");		//비정상적인 값이 입력된 경우 에러메세지 출력.
+				System.out.println(""
+						+ "[에러] 가위,바위,보 중 하나를 선택하여 입력해주세요.");		//비정상적인 값이 입력된 경우 에러메세지 출력.
 			}
 			
 			//컴퓨터와 사용자의 가위바위보 출력
