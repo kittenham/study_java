@@ -30,7 +30,7 @@ public class InputCheckApp {
 		
 		//방법1.
 		//반복문의 조건식이 무조건 참이 되도록 비정상적인 값을 초기값으로 저장해야함.
-		int score=-1;			//초기값으로 비정상적인 값을 넣어야함.
+		int score=-1;			//※초기값으로 비정상적인 값을 넣어야함.
 		while(score<0 || score>100) {		//=>비정상적인값일때, 반복되도록 조건식 만들기. 
 					//입력을 몇 번을 해야하는지 알 수 없음(정상적인값이 들어올때까지 반복하니까.) => while 반복문 사용.
 			System.out.println("점수입력[0~100] >> ");
@@ -44,7 +44,7 @@ public class InputCheckApp {
 
 		
 		//방법2/.
-		int score2=-1;			
+		int score2;			//score2의 초기값 입력할 필요X. do-while문 안에서 사용자가 값을 입력할 것이기 때문.
 		do {		
 			System.out.println("점수입력[0~100] >> ");
 			score2=scanner.nextInt();
@@ -52,16 +52,17 @@ public class InputCheckApp {
 				System.out.println("[에러] 점수는 0~100 범위의 정수값만 입력 가능합니다.");
 			}
 		} while(score2<0 || score2>100);
+		//비효율적 이유- 똑같은 조건식을 두번 써야 한다는점.
 		
 		System.out.println("===========================================");
 
 		
-		//방법3.
-		int score;			
-		while(true) {	
+		//방법3. 가장 효율적인 방법. 내가 원할때 break를 통해 반복문을 나갈 수 있음.
+		int score3;			
+		while(true) {		//조건식 대신 [true]를 사용하면 무조건 참 - 무한루프
 			System.out.println("점수입력[0~100] >> ");
-			score=scanner.nextInt();
-			if(score>=0 || score<=100) break;
+			score3=scanner.nextInt();
+			if(score3>=0 || score3<=100) break;
 			System.out.println("[에러] 점수는 0~100 범위의 정수값만 입력 가능합니다.");
 		}
 		

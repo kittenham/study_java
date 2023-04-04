@@ -15,6 +15,8 @@ public class MultiforExample {
 			}
 			System.out.println();
 		}
+		
+		
 
 
 		System.out.println("===============================================================");
@@ -42,24 +44,25 @@ public class MultiforExample {
 		//★★★★★★★
 		//★★★★★★★★★
 		
-		lp:for(int i=1; i<=9; i++) {
+		loop:for(int i=1; i<=9; i++) {
 			for(int j=1;j<=i;j++) {
-				if(i%2==0) continue lp;
+				if(i%2==0) continue loop;
 				System.out.print("★");
 			}
 			System.out.println();
-			
-
 		}			
+		
+		System.out.println();
+		System.out.println("=============");
 
-/*
+		//<강사풀이>
 		for(int i=1;i<=5;i++) {
-			for(int j=1;j<=5;j++) {
-				if(j==3) break;		//이때의 break는 해당break를 포함하는 반복문 for(int j=1;j<=5;j++)만 종료함.
-				System.out.println("i = "+i+", j = "+j);
+			for(int j=1;j<=2*2-1;j++) {
+				System.out.print("★");
 			}
+			System.out.println();
 		}
-*/
+		
 		System.out.println("===============================================================");
 		//★☆☆☆★		1,1		5,1
 		//☆★☆★☆		2,2		2,4
@@ -72,6 +75,19 @@ public class MultiforExample {
 				if(i==j) {
 					System.out.print("★");
 				} else if(i+j==6) {
+					System.out.print("★");
+				} else {
+					System.out.print("☆");
+				}
+			}
+			System.out.println();
+		}
+
+		System.out.println("=============");
+		
+		for(int i=1; i<=5; i++) {
+			for(int j=1; j<=5; j++) {
+				if(i==j || i+j==6) {
 					System.out.print("★");
 				} else {
 					System.out.print("☆");

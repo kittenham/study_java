@@ -1,5 +1,7 @@
 package example;
 
+import java.util.Scanner;
+
 //키보드로 정수값을 5번 입력받아 합계를 계산하여 출력하는 프로그램을 작성하세요.
 //ex) 1번째 정수값 입력 >> 10
 //    2번째 정수값 입력 >> 20
@@ -12,15 +14,28 @@ public class TotalOneExample {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//<내풀이>
         	int sum = 0;
 
         	for(int i=1;i<=5;i++) {
-            		System.out.println(i + "번째 정수값 입력 >>");
+            		System.out.print(i + "번째 정수값 입력 >> ");
             		String input = scanner.nextLine();
             		int num = Integer.parseInt(input);
             		sum+=num;
         	}
 		System.out.println("[결과]합계 = "+sum);
 
+		
+		
+		//<강사풀이>
+    	int tot = 0;
+
+    	for(int i=1;i<=5;i++) {
+        		System.out.print(i + "번째 정수값 입력 >> ");
+        		int num = scanner.nextInt();
+        		tot+=num;		//입력값을 tot 변수에 누적하여 저장
+    	}
+    	System.out.println("[결과] 합계 = "+tot);
+		
 	}
 }

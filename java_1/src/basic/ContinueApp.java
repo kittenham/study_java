@@ -13,7 +13,7 @@ public class ContinueApp {
 
 		for(int i=1;i<=5;i++) {
 			if(i==3) continue;		
-				//continue를 만나면 i=3일때만 출력신호(System.out.println(i+"\t"))를 넘어가고 다시 위로 올라가서 i++진행.
+				//continue를 만나면 i=3일때만(조건이 맞으면) 아래의 출력신호(System.out.println(i+"\t"))를 실행하지않고 건너뛰고 다시 위로 올라가서 i++진행.
 			System.out.println(i+"\t");
 		}
 		

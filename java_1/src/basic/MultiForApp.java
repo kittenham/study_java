@@ -35,6 +35,10 @@ public class MultiForApp {
 
 		
 		//★★★★★★★ 4줄 출력하기
+		//★★★★★★★ 
+		//★★★★★★★ 
+		//★★★★★★★ 
+		
 		for(int j=1;j<=4;j++) {		//"행(Row)" 처리 위한 반복문
 			for(int i=1;i<=7;i++) {		//"열(Colum)" 처리 위한 반복문
 				System.out.print("★");
