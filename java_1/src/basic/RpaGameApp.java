@@ -24,10 +24,10 @@ public class RpaGameApp {
 			//사용자에게 가위바위보 중 하나를 키보드로 입력받아 저장
 			//=> 입력값이 1~3 범위의 정수값이 아닌경우, 에러 메세지 출력 후 재입력.
 			int user;
-			while(true) {
+			while(true) {		//입력값 검증을 위한 반복문
 				System.out.println("가위바위보[1:가위,2:바위,3:보] >> ");
 				user=scanner.nextInt();
-				if(user>=1 && user<=3) break;	//정상적인 값이 입력된 경우 반복문 종료
+				if(user>=1 && user<=3) break;	//정상적인 값이 입력된 경우 반복문 종료 (검증을 위한 것이기 때문에. 잘못된 것일 경우에만 반복되는 것임)
 				System.out.println(""
 						+ "[에러] 가위,바위,보 중 하나를 선택하여 입력해주세요.");		//비정상적인 값이 입력된 경우 에러메세지 출력.
 			}

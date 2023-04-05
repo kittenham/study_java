@@ -1,6 +1,6 @@
 package basic;
 
-//2차원 배열 : 1차원 배열의 모임
+//2차원 배열 : 1차원 배열의 모임 (1차원 배열 값의 모임이 아님)
 
 public class DoubleArrayApp {
 	public static void main(String[] args) {
@@ -44,7 +44,7 @@ public class DoubleArrayApp {
 		//요소에 0이 아닌 다른 값 넣어보자
 		int[][] su = new int[][] {{10,20,30},{40,50,60},{70,80,90}};	//3행 3열의 2차원 배열이 됨. 이때 new int[][] 생략해도 됨.
 		
-		for(int[] array : su) {			//2차원 배열을 사용할 때(일괄처리할때)는 for문을 2번 써 줘야함. 행과 열을 계산해야 하기 때문
+		for(int[] array : su) {			//2차원 배열을 사용할 때(일괄처리할때)는 for문을 2번 써 줘야함. 행과 열을 계산해야 하기 때문 . 따라서 n차원배열에서는 for문을 n번 사용함.
 			for(int temp: array) {
 				System.out.print(temp+"\t");
 			}
