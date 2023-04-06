@@ -5,6 +5,7 @@ package oop;
 public class MethodApp {
 	// 프로그램 실행시 JVM(Java Virtual Machine)에 의해 자동호출하는 특별한 메소드 
 	public static void main(String[] args) {	//void무반환형. 메인 메소드
+		
 		//클래스로 객체를 생성하여 객체의 메모리 주소를 참조변수에 저장
 		//=> 같은 패키지에 작성된 클래스는 패키지 표현없이 클래스 사용이 가능하다.
 		//=> 참조변수를 사용하여 객체의 필드 또는 메소드 접근이 가능하다.
