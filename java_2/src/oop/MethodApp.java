@@ -42,6 +42,7 @@ public class MethodApp {
 		System.out.println("===================================================================");
 		
 		//메소드를 호출하면 반환되는 값이 존재 >> 반환값을 변수에 저장
+		
 		//=> 메소드의 반환값을 지속적으로 사용하고자 할 경우, 반환값을 변수에 저장하면 됨.
 		int result=method.returnTot(30,70);
 		System.out.println("합계(메소드 호출의 반환값) = "+result);
