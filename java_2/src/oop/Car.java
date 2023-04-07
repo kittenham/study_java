@@ -6,19 +6,27 @@ package oop;
 
 //클래스 선언 형식
 //형식_  [public] class 클래스명{
-//			필드(Field)
+//			필드(Field)  : 표현 대상의 속성(값)을 저장하기 위한 변수 = 멤버변수
 //			...
-//			생성자(Constructor)
+//			생성자(Constructor)  : new연산자를 이용해 클래스로 객체를 생성하기 위한 특별한 형태의 메소드
 //			...
-//			메소드(Method)
+//			메소드(Method)  : 표현 대상의 행위를 명령으로 제공하기 위한 함수 =  멤버함수
 //			...
 //		}
+
 
 
 //클래스를 작성할 때, 필드와 메소드에는 접근 지정자를 사용하여 접근 유무를 설정할 수 있다.(은닉화 시키는것)
 //접근 지정자(Access Modifier) : private, package(default), protected, public
 //=>클래스(public, package(default) 두개만 사용가능), 필드, 메소드, 생성자를 선언할 때 접근 허용을 설정하기 위한 키워드
+
 //private : 클래스 내부에서만 접근 가능하도록 허용하는 접근 제한자
+//=> 일반적으로 필드에 사용하는 접근 제한자 - 객체로 필드에 직접적인 접근을 제한하기 위한 사용
+//=> 데이타 은닉화(Data Hiding) : 값을 숨겨 보호하기 위한 기능 - 캡슐화
+
+//public :  모든 패키지의 클래스에서 접근 가능하도록 허용하는 접근 제한자
+//=> 일반적으로 메소드에 사용하는 접근 제한자 - 프로그램 작성에 필요한 모든 클래스에서 접근할 수 있도록 허용
+//클래스에 public 有 : 모든 클래스에서 공유사용 가능. public 없으면, 같은 패키지 안의 클래식에서만 사용가능
 
 
 //자동차를 객체 모델링하여 클래스로 작성
@@ -27,13 +35,13 @@ package oop;
 
 //Car class는 실행을 위한 클래스가 아님. 객체 생성을 위한 클래스임. 따라서 실행 클래스가 따로 필요함.(CarApp을 따로 만들어 주었다.)
 public class Car {
-	//[필드(Field)]
+	//[필드(Field)]: 클래스 내부에 선언된 모든 메소드는 필드 접근 가능
 	private String modelName;	//모델명
 	private boolean engineStatus;	//엔진상태 => (false: Engineoff,  true: Engineon)
 	private int currentSpeed;	//현재 속도
 	
 	//[생성자(Constructor)] : 생성자 안 만들것임.
-	//※ 생성자를 선언하지 않으면, 매개변수가 없는 기본 생성자(Default Constructor)가 자동으로 제공된다.
+	//※생성자를 선언하지 않으면, 매개변수가 없는 기본 생성자(Default Constructor)가 자동으로 제공된다.
 	
 	//[메소드(Method)] : 필드를 사용하여 메소드의 명령으로 필요한 기능을 제공되도록 작성
 	void startEngine() { //시동 온	// 필드만 이용할 것이라 매개변수 사용X
@@ -53,7 +61,7 @@ public class Car {
 	}
 	void speedUp(int speed){//속도 증가	//매개변수 필요
 		//속도 증가는 우선적으로 시동이 켜진 후에 이루어져야하기 때문에 시동을 키는 조건이 있어야함.
-		if(engineStatus) { //엔진이 꺼져있는 경우
+		if(!engineStatus) { //엔진이 꺼져있는 경우
 			System.out.println(modelName+"의 시동이 꺼져있습니다.");
 			return;	//시동이 꺼져있을때 속도 증가가 안되니까 아예 속도 증가 메소드를 종료해버려야하기 때문.
 		}
@@ -81,6 +89,8 @@ public class Car {
 	
 	//은닉화 처리된 필드를 위해 필드값을 반환하는 Getter 메소드와 필드값을 변경하는 Setter 메소드를 선언(작성할 수 있다)
 	//Setter 메소드 선언 = "캡슐화"
+	//캡슐화(Encapsulation) : 표현대상의 속성(필드)과 행위(메소드)를 하나의 자료형(클래스)로 작성
+	// => 필드를 은닉화 처리하여 보호하고 메소드를 이용하여 처리되도록 설정
 	
 	
 	//Getter 메소드 : 클래스 외부에서 필드값을 사용할 수 있도록 필드값을 반환하는 메소드
@@ -99,7 +109,7 @@ public class Car {
 //		modelName=modelName;	//둘 다 매개변수임. 매개변수를 매개변수에 넣는것. =>쓸모가 없음.
 		this.modelName=modelName;	//필드와 매개변수를 구분하기 위해 this.를 앞에 넣어 필드를 설정해준다.
 		//this : 메소드 내부에서 클래스의 객체를 표현하는 키워드
-		//=> this 키워드를 사용하여 필드 표현
+		//=> this 키워드를 사용하여 필드 표현 (this를 안쓰면 그냥 매개변수가됨)
 	}
 	public boolean isEngineStatus() {
 		return engineStatus;

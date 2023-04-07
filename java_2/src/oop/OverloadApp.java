@@ -20,6 +20,7 @@ public class OverloadApp {
 		overload.displayString("임꺽정");
 		
 		//전달받은 값에 대한 자료형의 매개변수가 없는 경우, 에러발생!
+		//overload.display(12.34);
 		
 		
 		
