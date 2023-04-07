@@ -31,6 +31,5 @@ public class SingletonApp {
 		Singleton.getInstance().display();
 		
 		
-
 	}
 }
