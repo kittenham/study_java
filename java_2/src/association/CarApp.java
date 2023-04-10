@@ -32,7 +32,6 @@ public class CarApp {
 		
 		System.out.println("==========================================================================");
 		
-		
 		System.out.println(carOne.getModelName()+"의 엔진정보 >> ");
 		engine.diaplayEngine();
 		System.out.println("=============================================================");
