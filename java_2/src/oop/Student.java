@@ -1,9 +1,9 @@
 package oop;
 
 //static 키워드 : 객체가 아닌 클래스로 접근하기 위한 기능을 제공하는 제한자
-//=> 클래스(내부 클래스), 필드, 메소드 작성시 사용
+//=> 클래스(내부 클래스일때만 사용가능), 필드, 메소드 작성시 사용
 //제한자(Modifier) : 특별한 기능을 제공(제한)하기 위해 사용하는 키워드
-//=> Access Modifier(private, package, protected, public), static, final, abstract  
+//=> 접근제한자Access Modifier(private, package, protected, public), static, final, abstract  
 
 
 //학생정보(학번, 이름, 국어, 영어, 총점)를 저장하기 위한 클래스 => VO 클래스

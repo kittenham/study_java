@@ -3,6 +3,8 @@ package oop;
 import java.io.IOException;
 
 //Runtime 클래스 : Java 프로그램과 운영체제(Operation System) 간의 필요한 기능을 제공하는 메소드가 선언된 클래스 
+//기능의 메소드가 선언된 클래스
+
 public class RuntimeApp {
 	public static void main(String[] args) throws IOException {
 //		Runtime runtime = new Runtime();
