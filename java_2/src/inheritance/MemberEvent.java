@@ -36,6 +36,7 @@ public class MemberEvent extends Member {	//상속 : 부모클래스(Member), �
 		//super(); 가 생략 되어 있는 것. //부모클래스의 매개변수가 없는 기본 생성자 호출(생략이 가능하다)
 	}
 	
+/*
 	public MemberEvent(String id, String name, String email) {
 		super();
 //		this.id = id;		=> 상속으로 두가지 필드(아이디, 이름)을 이 클래스에서 선언하지 않았으므로.
@@ -45,6 +46,14 @@ public class MemberEvent extends Member {	//상속 : 부모클래스(Member), �
 		this.email = email;
 	}
 
+*/
+	//[Alt]+[Shift]+[S] >> 팝업메뉴 - [O] >> 부모클래스의 생성자 선택 >> 필드 선택 >> Generate
+	//super를 사용할 때 위의 것보다 더 효율적.
+	public MemberEvent(String id, String name, String email) {
+		super(id, name);//부모클래스의 매개변수가 있는 생성자 호출
+		this.email = email;
+	}
+	
 /*
 	public String getId() {
 		return id;
