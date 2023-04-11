@@ -6,7 +6,6 @@ public class AcademyStudent extends AcademyPerson {
 	private String course;
 	
 	public AcademyStudent() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public AcademyStudent(int num, String name, String course) {

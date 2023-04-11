@@ -23,7 +23,7 @@ public class AcademyApp {
 		//사람정보(AcademyPerson 객체)를 저장하기 위한 요소들이 존재하는 배열 생성
 		AcademyPerson[] persons = new AcademyPerson[5];	
 		//AcademyPerson은 학생, 강사, 직원정보 클래스 모두의 부모클래스임.
-		//따라서, 배열요소에 학생정보(AcademyStudent 객체), 강사정보(AcademyInstructor 객체), 직원정보(AcademyStaff 객체) 저장이 가능하다.
+		//따라서, 배열요소에 학생정보(AcademyStudent 객체), 강사정보(AcademyInstructor 객체), 직원정보(AcademyStaff 객체) 모두 저장이 가능하다.
 		//==> 부모 클래스는 모든 자식 클래스의 정보를 저장할 수 있다.
 		//==> 부모클래스의 참조변수에는 자식클래스의 생성자로 부모클래스의 객체를 생성하여 저장 가능.
 	
@@ -36,7 +36,8 @@ public class AcademyApp {
 		persons[2] = new AcademyStaff(3000, "전우치", "운영관리팀");
 		persons[3] = new AcademyStudent(4000, "일지매", "웹 디자인 과정");
 		persons[4] = new AcademyStaff(5000, "장길산", "경영회계팀");
-		
+				
+
 		//배열요소에 저장된 객체를 하나씩 제공받아 참조변수에 저장하여 일괄처리
 		for(AcademyPerson person : persons) {	//일괄처리
 			//오버라이드 선언된 메소드는 묵시적 객체 형변환에 의해 부모클래스의 메소드를 호출하지 않고 자식클래스의 메소드를 호출한다.
@@ -48,7 +49,8 @@ public class AcademyApp {
 
 		
 		//오버라이드 선언되지 않은 자식클래스의 메소드를 호출하기 위해 명시적 객체 형변환을 이용하면, 참조변수의 자식클래스의 객체를 일시적으로 저장하여 자식클래스의 메소드를 호출할 수 있음.
-
+		
+			
 //		for(AcademyPerson person : persons) {
 //			System.out.println(((AcademyStudent)person).getCourse()+"의 학생정보 >> ");		
 //		}
@@ -60,7 +62,7 @@ public class AcademyApp {
 		//형식) 참조변수 instance of 클래스
 		//참조 가능한 클래스인 경우 true를 제공하는 연산자
 		
-		for(person instanceof AcademyStudent) {
+		if(person instanceof AcademyStudent) {
 			System.out.println(((AcademyStudent)person).getCourse()+"의 학생정보 >> ");
 		} else if(person instanceof AcademyInstructor) {
 			System.out.println(((AcademyInstructor)person).getSubject()+"의 강사정보 >> ");

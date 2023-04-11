@@ -30,9 +30,15 @@ public class EmployeeRegular extends Employee{
 	
 	@Override
 	public int computePay() {
-		// TODO Auto-generated method stub
-		return super.computePay();
+		return anuualSalary/12;
 	}
-	
+
+	/*
+	//부모클래스의 final 메소드를 오버라이드 선언하여 에러 발생
+	@Override
+	public int computeIncentive() {
+		return 100000000;
+	}
+	*/
 	
 }

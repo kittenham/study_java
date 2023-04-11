@@ -7,7 +7,6 @@ public class EmployeeTime extends Employee{
 	private int workedhour;
 	
 	public EmployeeTime() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public EmployeeTime(int empNo, String empName, int moneyPerhour, int workedhour) {
