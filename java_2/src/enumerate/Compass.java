@@ -21,13 +21,14 @@ public enum Compass {
 	//=> 반드시 생성자는 은닉화 선언
 	//생성자를 선언하면 매개변수가 없는 기본 생성자는 미제공
 	private Compass(String value) {
-		this.value=value;
+		this.value = value;
 	}
 	
 	//상수필드의 자료형 또는 저장값을 변경하기 위한 필드값 반환
 	public String getValue() {	//상수필드에 저장된 값을 반환할 수 있다.
 		return value;
 	}
+
 	
 	
 }
