@@ -9,7 +9,6 @@ public class AcademyPerson {
 	private String name;
 	
 	public AcademyPerson() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public AcademyPerson(int num, String name) {

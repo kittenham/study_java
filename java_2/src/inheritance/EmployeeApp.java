@@ -40,6 +40,7 @@ public class EmployeeApp {
 			}
 			
 			//자식클래스에서 부모클래스의 메소드를 오버라이드 선언하면 묵시적 객체 형변환에 의해 자동으로 참조변수가 자식클래스로 형변환되어 자식클래스의 메소드를 호출 가능
+			//자식클래스에서 오버라이드 하지않으면 부모클래스의 메소드가 호출이 됨 => 강제성이 없다...
 			System.out.println("급여 = "+employee.computePay());
 			System.out.println("인센티브 = "+employee.computeIncentive());
 			

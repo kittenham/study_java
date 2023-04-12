@@ -23,7 +23,7 @@ public class AcademyApp {
 		//사람정보(AcademyPerson 객체)를 저장하기 위한 요소들이 존재하는 배열 생성
 		AcademyPerson[] persons = new AcademyPerson[5];	
 		//AcademyPerson은 학생, 강사, 직원정보 클래스 모두의 부모클래스임.
-		//따라서, 배열요소에 학생정보(AcademyStudent 객체), 강사정보(AcademyInstructor 객체), 직원정보(AcademyStaff 객체) 모두 저장이 가능하다.
+		//따라서, 배열요소(persons)에 학생정보(AcademyStudent 객체), 강사정보(AcademyInstructor 객체), 직원정보(AcademyStaff 객체) 모두 저장이 가능하다.
 		//==> 부모 클래스는 모든 자식 클래스의 정보를 저장할 수 있다.
 		//==> 부모클래스의 참조변수에는 자식클래스의 생성자로 부모클래스의 객체를 생성하여 저장 가능.
 	
