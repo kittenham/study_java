@@ -57,7 +57,9 @@ public class WolfHumanApp {
 //		인터페이스(부모)로 참조변수를 생성하여 자식클래스의 객체 저장 가능
 //		WolfHuman의 부모클래스는 Human과 Wolf 둘 모두임
 		//자식클래스가 같은 클래스와 인터페이스는 명시적 객체 형변환을 이용하여 자식클래스의 객체를 공유하여 사용 가능하다.
+		//Wolf wolf=(WolfHuman)human;
 		Wolf wolf = ((Wolf)human);	//human안에 있는 객체는 human 객체.
+		
 		
 		//묵시적 객체 형변환에 의해 자동으로 자식클래스의 메소드가 호출된다.
 		wolf.fastWalk();

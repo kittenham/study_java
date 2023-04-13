@@ -16,9 +16,10 @@ public enum Compass {
 	//	private final int value;	//상수필드 값을 변경하기 위한 필드
 	private final String value;	//상수필드의 자료형을 변경하기 위한 필드
 	
+	
 	//상수필드에 초기값을 저장하기 위한 매개변수가 있는 생성자 선언
 	//=> 수 필드의 자료형 또는 저장값을 변경하기 위한 필드에 매개변수가 저장
-	//=> 반드시 생성자는 은닉화 선언
+	//=> 반드시 생성자는 은닉화 선언(private)
 	//생성자를 선언하면 매개변수가 없는 기본 생성자는 미제공
 	private Compass(String value) {
 		this.value = value;
@@ -28,7 +29,7 @@ public enum Compass {
 	public String getValue() {	//상수필드에 저장된 값을 반환할 수 있다.
 		return value;
 	}
-
+	//*final은 필드값 변경하면 에러떨어지기 때문에 getter값만 나오고 setter값은 생성하지 않음.
 	
 	
 }
