@@ -35,9 +35,9 @@ public class EmployeeTime extends Employee{
 	public int computeTimepay() {
 		return moneyPerhour*workedhour;
 	}
-//
-//	@Override
-//	public int computePay() {
-//		return super.computePay();
-//	}
+
+	@Override
+	public int computePay() {
+		return moneyPerhour*workedhour;
+	}
 }

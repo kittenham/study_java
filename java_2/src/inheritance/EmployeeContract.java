@@ -30,8 +30,7 @@ public class EmployeeContract extends Employee	{
 	
 	@Override
 	public int computePay() {
-		// TODO Auto-generated method stub
-		return super.computePay();
+		return contractPay;
 	}
 	
 
