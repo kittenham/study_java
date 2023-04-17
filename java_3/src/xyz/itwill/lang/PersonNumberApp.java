@@ -15,7 +15,7 @@ public class PersonNumberApp {
 		String number;
 		//정상적인 주민번호를 입력받기 위한 반복문 (입력과 검증)
 		while(true) {
-			System.out.println("주민번호를 입력해주세요. [ex.901225-1234567] >> ");
+			System.out.print("주민번호를 입력해주세요. [ex.901225-1234567] >> ");
 			//키보드로 입력받은 문자열에서 앞과 뒤이 공백을 제거하여 반환받아 변수에 저장
 			number=scanner.nextLine().trim();
 			//키보드로 입력받은 문자열에서 모든 공백을 제거하여 반환받아 변수에 저장
@@ -24,7 +24,7 @@ public class PersonNumberApp {
 			//주민번호는 14자리로 입력 && 7번째 자리에 반드시 '-'문자가 존재(배열순서로는 6)할때,
 			//=> 정상적인 주민번호가 입력되었으므로 반복문을 종료한다.
 			//방법1.
-//			if(number.length()==14 && number.charAt(6=='-')) break;
+//			if(number.length()==14 && number.charAt(6)=='-') break;
 			//방법2.
 			if(number.length()==14 && number.indexOf('-')==6) break;
 			
@@ -39,9 +39,9 @@ public class PersonNumberApp {
 //		System.out.println("separation = "+separation);	//맞는지 확인해본것.
 		
 		//생년월일을 저장하기 위한 변수 - 입력받은 문자열(주민번호)을 분리하여 변수에 저장
-		String birthday = "";
+		String birthday = "";	//문자열을 비교할때니까 " " 사용.
 		if(separation.equals("1") || separation.equals("2")) {	// 20세기(1900년대에 태어난 경우)
-			birthday+="19";
+			birthday+="19"; 	//추가 후 저장해주세요.
 		} else if(separation.equals("3") || separation.equals("4")) {
 			birthday+="20";
 		}

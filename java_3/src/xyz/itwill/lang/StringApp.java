@@ -16,8 +16,8 @@ public class StringApp {
 		
 		System.out.println("==============================================================");
 		
-		//" " 기호로 String 객체를 표현할 경우 동일한 문자열의 String 객체는 생성하지 않고 기존에 생성된 String 객체를 재활용하여 사용(=동일한 문자열이면 객체를 각각 두개를 생성하는게 아니라 있는거 다시 쓴다는 뜻)
-		String str2="ABC";	//기존의 String 객체의 메모리 주소를 제공받아 변수에 저장
+		//" " 기호로 String 객체를 표현할 경우 동일한 문자열의 String 객체는 생성하지 않고 메소드 영역에 기존에 생성된 String 객체를 재활용하여 사용(=동일한 문자열이면 객체를 각각 두개를 생성하는게 아니라 있는거 다시 쓴다는 뜻)
+		String str2="ABC";	//기존의 String 객체의 메모리 주소를 제공받아 변수에 저장. str1과 str2는 똑같은 객체와 객체주소를 참조.
 		
 		//참조변수를 비교연산자로 비교할 경우 참조변수에 저장된 객체의 메모리 주소를 비교하는 것이다.
 		//=> String 객체에 저장된 문자열을 비교하는 것이 아니라 String 객체의 메모리 주소 비교하는 것.
@@ -41,6 +41,7 @@ public class StringApp {
 		System.out.println("=============================");
 		
 		//***(중요!) String.equals(String str) : String 객체에 저장된 문자열과 매개변수로 전달받은 문자열을 비교하여 다른경우 [false]를 반환하고, 같은 경우 [true]를 반환하는 메소드
+		//따라서, 문자열을 비교할때는 ==, != 쓰면 안됨.
 		//=> 비교문자열이 영문자인 경우 대소문자로 구분하여 비교
 		if(str1.equals(str3)) {
 			System.out.println("str1 변수와 str3 변수에 저장된 String 객체의 메모리 문자열이 같습니다.");
@@ -61,7 +62,8 @@ public class StringApp {
 		System.out.println("==============================================================");
 		
 		//String.equalsIgnoreCase(String str) : String 객체에 저장된 문자열과 매개변수로 
-		//전달받은 문자열을 비교하여 다른 경우 [false]를 반환하고 같은 경우 [true]를 반환하는 메소드 => 비교 문자열이 영문자인 경우 대소문자를 구분하지 않고 비교
+		//전달받은 문자열을 비교하여 다른 경우 [false]를 반환하고 같은 경우 [true]를 반환하는 메소드 
+		//=> 비교 문자열이 영문자인 경우 대소문자를 구분하지 않고 비교
 		if(str1.equalsIgnoreCase(str4)) {
 			System.out.println("str1 변수와 str4 변수에 저장된 String 객체의 문자열이 같습니다.");			
 		} else {
@@ -106,7 +108,7 @@ public class StringApp {
 		
 		System.out.println("==============================================================");
 		
-		//String.indexOf(String str) : String 객체에 ㅈ장된 문자열에서 매개변수로 전달받은 문자열(문자)을 처음부터 차례대로 검색하여 시작위치값(첨자)를 반환하는 메소드
+		//String.indexOf(String str) : String 객체에 저장된 문자열에서 매개변수로 전달받은 문자열(문자)을 처음부터 차례대로 검색하여 시작위치값(첨자)를 반환하는 메소드
 		//=> 매개변수로 전달받은 문자열을 찾을 수 없는 경우 >> -1을 반환한다.
 		System.out.println("A 문자열의 저장 위치 = "+str5.indexOf("A"));
 		System.out.println("A 문자열의 저장 위치 = "+str5.indexOf("EFG"));
@@ -135,7 +137,8 @@ public class StringApp {
 		String str8 = "       임    꺽    정       ";
 		
 		System.out.println("입력된 이름은 ["+str8+"] 입니다.");
-		//String.replace(
+		//String.replace(String regEx, String replacement) : String 객체에 저장된 문자열에서
+		//검색 문자열(정규표현식)을 찾아 치환 문자열로 변경하여 반환하는 메소드
 		System.out.println("입력된 이름은 ["+str8.replace(" ", "").replace("꺽", "걱")+"] 입니다.");
 		
 		System.out.println("==============================================================");
@@ -144,8 +147,11 @@ public class StringApp {
 		
 		System.out.println("전화번호 = "+str9);
 		
-		//String.split(String regEx) : String 객체에 저장된 문자열을 매개변수로 전달받은 문자열(정규표현식)로 구분 분리하여 문자열 배열로 반환하는 메소드
-		//=> 정규표현식에서 사용되는 메타문자를 일반문자로 변환하여 사용하기 위해 \\(역슬러시)를 사용하여 회피문자로 처리하여 표현
+		//String.split(String regEx) : String 객체에 저장된 문자열을 매개변수로 전달받은 
+		//문자열(구분자 : Delimiter - 정규표현식)로 구분 분리하여 문자열 배열로 반환하는 메소드
+		//=> 정규표현식에서 사용되는 메타문자를 일반문자로 변환하여 사용하기 위해 \\(역슬러시)를 사용하여 
+		//회피문자로 처리하여 표현
+		
 		String[] numArray=str9.split("-");
 //		String[] numArray=str9.split("\\*");
 		

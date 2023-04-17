@@ -43,7 +43,7 @@ public class CalcApp {
 
 
 //catch 구문에서 예외클래스를 |연산자로 연결하여 다수의 예외클래스에 대한 객체를 전달받아 예외처리 가능
-/*
+/* => 할 수는 있지만 크게 권장 안함.
  	public static void main(String[] args) {
 		try {
 			new CalcApp();

@@ -13,7 +13,7 @@ import java.util.Scanner;
 //Object 클래스 : 모든 Java 클래스가 반드시 상속받는 부모클래스 (얘가 가진 메소드가 중요한게 아니라 이 클래스 자체가 중요함)
 //=> 모든 java 클래스를 대신하여 사용할 수 있는 대표클래스이기 때문에 중요함.
 //Math 클래스 : 수학관련 기능을 메소드로 제공하는 클래스
-//Class 클래스 : 메모리(MethodArea)에 저장된 클래스 관련 정보를 저장하기 위한 클래스 = 클래스 객체
+//Class 클래스 : 메모리(MethodArea)에 저장된 클래스(Class 객체(Clazz 라고 부름) 관련 기능을 메소드로 제공하기 위한 클래스 [= 클래스 객체]
 
 
 //System 클래스 : 표준 입출력 스트림을 제공하거나 시스템 관련 기능을 메소드로 제공하는 클래스
@@ -34,7 +34,10 @@ public class SystemApp {
 			System.exit(0);
 		}
 		
-		//System.currentTimeMillis();  : 시스템의 현재 날짜와 시간에 대한 타임스템프(TimeStamp)를 반환하는 메소드
+		//System.gc() : 메모리를 청소하는 프로그램(Garbage Collector)을 실행하는 메소드
+		System.gc();
+		
+		//System.currentTimeMillis();  : 시스템의 현재 날짜와 시간에 대한 타임스템프(TimeStamp)를 반환하는 메소드 (실행시간측정가능)
 		//타임스템프(TimeStamp) : 날짜와 시간을 정수값으로 표현하기위해 만들어진 시간값
 		//=> 1970년 1월 1일을 기준으로 1/1000초(1ms)당 1씩 증가된 정수값
 		//=> 날짜와 시간을 정수값으로 표현하여 연산('-(빼기)'만!) 하기 위한 사용
@@ -48,8 +51,6 @@ public class SystemApp {
 		
 		System.out.println("실행시간 = "+(endTime-startTime)+"ms");
 		
-		//System.gc() : 메모리를 청소하는 프로그램(Garbage Collector)을 실행하는 메소드
-		System.gc();
 		
 		scanner.close();
 	}

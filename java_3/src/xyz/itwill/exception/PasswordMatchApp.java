@@ -23,7 +23,7 @@ public class PasswordMatchApp {
 		scanner.close();
 */
 		
-//방법2		
+//방법2		 ※ 인위적으로 예외객체를 생성하여 예외를 발생시키는 방법
 		int password = 123456;
 		
 		Scanner scanner = new Scanner(System.in);
