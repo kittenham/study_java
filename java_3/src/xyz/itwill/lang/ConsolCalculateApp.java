@@ -11,6 +11,8 @@ public class ConsolCalculateApp {
 
 	public static void main(String[] args) {
 		
+		
+		
 	}
 	
 }
