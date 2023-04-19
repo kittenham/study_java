@@ -6,8 +6,9 @@ import java.util.Date;
 
 //java.text 패키지 : 객체에 저장된 값을 변환하는 기능의 클래스(인터페이스)가 선언된 클래스
 
-//SimpleDateFormat 클래스 : Date 객체와 String 객체를 서로 변환하기 위한 기능을 메소드로 제공하기 위한 클래스
+//★SimpleDateFormat 클래스 : Date 객체와 String 객체를 서로 변환하기 위한 기능을 메소드로 제공하기 위한 클래스
 //Date ↔ String 바꿀 수 있음.
+//Date 클래스와 SimpleDateFormat 클래스는 같이 쓰는 것을 권장
 
 public class SimpleDateFormatApp {
 	public static void main(String[] args) {

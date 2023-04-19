@@ -2,7 +2,7 @@ package xyz.itwill.util;
 
 import java.text.DecimalFormat;
 
-//DecimalFormatApp 클래스 : Number 객체(숫자값)와 String 객체를 서로 반대로 변환하기 위한 기능을 메소드로 제공하기 위한 클래스
+//★DecimalFormat 클래스 : Number 객체(숫자값)와 String 객체를 서로 반대로 변환하기 위한 기능을 메소드로 제공하기 위한 클래스
 public class DecimalFormatApp {
 	
 	public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class DecimalFormatApp {
 		System.out.println("금액 = "+DecimalFormat.getCurrencyInstance().format(money));
 		//DecimalFormat.getCurrencyInstance() : 패턴정보가 저장된 DecimalFormat 객체를 반환하는 메소드
 		//=> 맨앞에 시스템이 사용하는 화폐단위를 붙이고 3자리마다 콤마(,)를 사용하여 숫자값을 표현한다.
-
+		
 		
 	}
 
