@@ -11,7 +11,7 @@ import java.util.Scanner;
 //	 [결과] 태어난지 [1일]이 지났습니다. (타임스템프, -> 1로 바꿔주면됨)
 //2. 형식에 맞지않은 생년월일을 입력한 경우 에러메세지 출력 후 프로그램 종료 (date, simpledateformat)
 public class DayCalculateApp {
-
+//????
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -31,12 +31,21 @@ public class DayCalculateApp {
 		}
 		*/
 		System.out.print("생년월일을 입력하세요. [ex.2000-01-01] >> ");
+		String birth = sc.next();
+		
+		long currentTime = System.currentTimeMillis();
+		
+		Date birthDate = new Date()
+		
+		
+		sc.close();
 		
 		SimpleDateFormat birthFormat = new SimpleDateFormat("yyyy-MM-dd");
+		birthFormat.applyPattern("yyyy-MM-dd");
+		
 		
 		//문자열로 입력된 걸 시간으로 바꿔서 계산해야함. (String -> Date)
 		//생년월일 저장변수
-		String birth = "2000-01-01";
 		
 		try {
 			Date birthDate = birthFormat.parse(birth); 
