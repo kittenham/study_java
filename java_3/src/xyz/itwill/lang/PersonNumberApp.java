@@ -16,7 +16,7 @@ public class PersonNumberApp {
 		//정상적인 주민번호를 입력받기 위한 반복문 (입력과 검증)
 		while(true) {
 			System.out.print("주민번호를 입력해주세요. [ex.901225-1234567] >> ");
-			//키보드로 입력받은 문자열에서 앞과 뒤이 공백을 제거하여 반환받아 변수에 저장
+			//키보드로 입력받은 문자열에서 앞과 뒤의 공백을 제거하여 반환받아 변수에 저장
 			number=scanner.nextLine().trim();
 			//키보드로 입력받은 문자열에서 모든 공백을 제거하여 반환받아 변수에 저장
 			number=scanner.nextLine().replace(" ", "");

@@ -29,7 +29,8 @@ public class SimpleDateFormatApp {
 		
 		System.out.println("현재날짜 = "+printDate);
 		
-		//SimpleDateFormat.applyPattern
+		//SimpleDateFormat.applyPattern(String pattern) : SimpleDateFormat 객체에 저장된
+		//패턴정보를 변경하는 메소드
 		dateFormat.applyPattern("yyyy-MM-dd HH:mm:ss");
 		System.out.println("현재 = "+dateFormat.format(now));
 		
