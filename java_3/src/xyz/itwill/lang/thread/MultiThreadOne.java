@@ -5,8 +5,12 @@ public class MultiThreadOne extends Thread{	//Thread 클래스 상속받기
 	public void run() {
 		for(char i='a';i<='z';i++) {
 			System.out.print(i);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-		super.run();
 	}
 
 }

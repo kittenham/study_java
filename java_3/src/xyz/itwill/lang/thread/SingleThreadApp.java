@@ -16,8 +16,8 @@ public class SingleThreadApp {
 	
 	//Thread 클래스 : 스레드 관련 정보를 저장하고 스레드 관련 제어 기능을 메소드로 제공하기 위한 클래스
 	//Thread.currentThread() : 정적 메소드X. 클래스로 호출하는것. 
-	//=> 현재 명령을 읽어 처리하는 스레드에 대한 Thread 객체를 반환하는 메소드
-	//Thread.getName() : Thread 객체에 저장된 스레드의 이름(고유값)을 반환하는 메소드
+	//		=> 현재 명령을 읽어 처리하는 스레드에 대한 Thread 객체를 반환하는 메소드
+	//Thread.getName() : Thread 객체에 저장된 스레드의 이름(고유값. 중복X)을 반환하는 메소드
 	System.out.println("["+Thread.currentThread().getName()+"] 스레드에 의해 main() 메소드의 명령 실행");
 	
 	//객체를 생성하여 메소드를 호출한 경우 스레드가 메소드로 이동하여 메소드의 명령을 실행한다.
@@ -32,7 +32,7 @@ public class SingleThreadApp {
 	}
 	//=> 얘가 먼저 실행된 후 , 아래의 명령을 통해 SingleThread에 있는 명령을 차례로 수행.
 	new SingleThread().display();
-	
+	//=> 알파벳 대문자 전부 출력후, 알파벳 소문자가 전부 출력됨. 무조건 순서대로.
 	}
 
 }

@@ -8,9 +8,9 @@ package xyz.itwill.lang;
 public class StringBufferApp {
 	public static void main(String[] args) {
 		//StringBuffer 클래스는 "new 연산자를 생성자를 호출"하여 객체 생성
-		StringBuffer sb = new StringBuffer("ABC");
+		StringBuffer sb = new StringBuffer("ABC");	//이때 ABC는 String 객체
 		
-		//StringBuffer객체에 저장된 문자열을 반환하는 메소드
+		//StringBuffer.toString() : StringBuffer객체에 저장된 문자열(String 객체)을 반환하는 메소드
 		System.out.println("sb.toString() = "+sb.toString()); 	
 		System.out.println("sb = "+sb); 	//결과는 위와 동일함.
 		//StringBuffer 객체가 저장된 참조변수를 출력할 경우 toString 메소드 자동 호출되기 때문.
@@ -20,16 +20,16 @@ public class StringBufferApp {
 		
 		//데이터 처리시에는 StringBuffer 사용. 출력시에는 String으로 하는 경우가 많음.
 		
-		System.out.println("str = "+str);
+		System.out.println("str = "+str);	//출력 : ABC
 		
 		System.out.println("======================================================================");
 		
 		//StringBuffer.append(Object o) : StringBuffer 객체에저장된 문자열에 매개변수로 전달받은 값을 "추가"하는 메소드
-		//=> String 객체에 저장된 문자열에 += 연산자를 사용한 것과 동일한 효과.
+		//=> String 객체에 저장된 문자열에 += 연산자를 사용한 것과 동일한 효과.(속도가 더 빠름)
+		//[Object o : 모든 값. 모든 객체.]
 		sb.append("DEF");	//코드가 String객체에 +=연산자 쓰는 것보다 가독성과 효율성이 더 큼.
 		System.out.println("sb = "+sb);	//출력시 ABCDEF 가 나옴
 		
-		System.out.println("======================================================================");
 		
 		//StringBuffer.insert(int index, Object o) : StringBuffer 객체에 저장된 문자열에 매개변수로 전달받은 문자열을 원하는 위치(첨자)에 삽입하는 메소드
 		sb.insert(4, "X");	//인덱스가 4인 위치(따지고보면 다섯번째 자리. 0부터 시작이니까)에 X를 삽입해 주세요.(추가!=삽입)
@@ -50,7 +50,7 @@ public class StringBufferApp {
 		sb.reverse();
 		System.out.println("sb = "+sb); //출력 : XDBA
 		
-//		StringBuffer vs StringBuilder => StringBuffer가 더 스레드에 안전함. 그래서 더 많이 씀~
+//		StringBuffer vs StringBuilder(동기화메소드X) => StringBuffer가 더 스레드에 안전함. 다중스레드에 대해 메소드가 동기화가 되어있어 안정화되어있기 때문. 그래서 더 많이 씀~
 		
 		
 		

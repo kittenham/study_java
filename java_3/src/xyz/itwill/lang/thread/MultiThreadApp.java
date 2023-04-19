@@ -4,7 +4,7 @@ package xyz.itwill.lang.thread;
 //다중 스레드 프로그램
 //=>프로그램 개발자가 직접 스레드를 생성하여 다수의 명령을 동시에 실행되도록 만든 프로그램
 //=> 프로그램의 모든 스레드가 소멸되야만 프로그램이 종료된다.(메인메소드만 종료되어도 프로그램 종료X)
-//=> GUI 프로그램, Web 프로그램 등은 다중 스레드 프로그램으로 작성한다.
+//=> GUI 프로그램(이벤트처리를 위해), Web 프로그램(여러사람이 같이보기 때문) 등은 다중 스레드 프로그램으로 작성한다.
 
 
 //프로그램 개발자가 스레드를 생성하여 명령을 실행하는 방법 ① - Thread 클래스 이용하는 방법
@@ -27,13 +27,13 @@ package xyz.itwill.lang.thread;
 //Runnable 인터페이스를 상속받은 자식클래스의 객체를 전달하여 Thread 객체를 생성하는 생성자를 호출한다.
 
 public class MultiThreadApp {
-	
+
 	//JVM에 의해 main 스레드가 생성되어 main() 메소드를 호출하여 main() 메소드에 작성된 명령 실행
-	//=> main() 메소드에 의해 전달된 예외는 JVM에 의해 자동으로 예외 처리한다.
+	//=> main() 메소드에 의해 전달된 예외는 JVM에 의해 자동으로 예외 처리\한다.
 	public static void main(String[] args) throws InterruptedException {
 		
 		//Thread 클래스로 직접 객체를 생성하여 start() 메소드 호출
-		//=> 새롭게 생성된 메소드는 Thread 객체의 명령이 없는 run() 메소드 호출 - 무의미
+		//=> 새롭게 생성된 메소드는 Thread 객체의 명령이 없는 run() 메소드 호출(->읽어들일 명령이 없어서 무의미)
 //		Thread thread = new Thread();
 //		Thread.start();
 /*		
@@ -43,11 +43,12 @@ public class MultiThreadApp {
 		//=> 따라서, 자식클래스의 오버라이드 선언된 run() 메소드가 호출되어 명령실행
 		one.start();	//얘는 실행되고,
 		one.start();	//얘는 실행이 안됨. 예외가 발생되어서 얘의 main 스레드는 소멸되어 종료.
-		//one.start();를 두번 작성하면 예외 발생. 이유) 하나의 Thread 객체는 하나의 스레드 생성만 가능하기 때문.
+		//one.start();를 두번 작성하면 예외 발생. 
+		//이유) 하나의 Thread 객체는 하나의 스레드 생성만 가능하기 때문.
 		//따라서, Thread 메소드를 사용하여 start()메소드를 여러번 호출할 경우 IllegalThreadStateException 발생함.
-		//=> 다중 스레드 프로그램에서 예외가 발생된 경우, 예외가 발생된 스레드만 종료됨.
+		//=> 다중 스레드 프로그램에서 예외가 발생된 경우, 예외가 발생된 스레드만 종료됨.(여기서는 메인스레드가 소멸됨.) -> 프로그램 자체가 종료되지는 않음.
 */		
-		//스레드 객체를 사용하여 start()메소드외에 다른 메소드를 호출하지 않을 경우 참조변수에 객체를 저장하지 않고 객체를 생성하여 직접 메소드 호출
+		//스레드 객체를 사용하여 start()메소드 외에 다른 메소드를 호출하지 않을 경우, 참조변수에 객체를 저장하지 않고 객체를 생성하여 직접 메소드 호출하는 것이 더 효율적.
 		new MultiThreadOne().start();	//객체를 만들어서 start()메소드 한번만 만들어서 실행가능. 위 보다 더 효율적.
 		new MultiThreadOne().start();
 		
@@ -57,6 +58,7 @@ public class MultiThreadApp {
 //		Thread thread = new Thread(two);
 		
 		new Thread(new MultiThreadTwo()).start();	//위의 두 문장을 한문장으로 줄인 것.
+		//MultiThreadTwo() : Runnable 인터페이스를 상속받은 자식클래스
 		
 		//=> 여기까지 총 스레드 3개. => [new MultiThreadOne().start(); 2개] + [new Thread(new MultiThreadTwo()).start(); 1개]
 		

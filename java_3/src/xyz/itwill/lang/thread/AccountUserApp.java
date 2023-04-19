@@ -15,9 +15,9 @@ public class AccountUserApp {
 		//=> 이 세사람이 같은 은행계좌로 입금처리를 한다면,
 		//▼
 		//단일 스레드(main)를 이용하여 은행계좌 사용자를 이용한 은행계좌의 입금 처리
-		one.getAccount().deposit(5000, one.getUserName());	//one이라는 사람이 Account로 deposit(입금)할 것이다.=> 잔액은 15000원이됨.
-		two.getAccount().deposit(5000, two.getUserName()); //two이라는 사람이 Account로 deposit(입금)할 것이다.=> 잔액은 20000원이됨.
-		three.getAccount().deposit(5000, three.getUserName()); //three이라는 사람이 Account로 deposit(입금)할 것이다.=> 잔액은 25000원이됨.
+		one.getAccount().deposit(5000, one.getUserName());	//one이라는 사람이 Account에서 반환받아 deposit(입금)할 것이다.=> 잔액은 15000원이됨.
+		two.getAccount().deposit(5000, two.getUserName()); //two이라는 사람이 Account에서 반환받아 deposit(입금)할 것이다.=> 잔액은 20000원이됨.
+		three.getAccount().deposit(5000, three.getUserName()); //three이라는 사람이 Account에서 반환받아 deposit(입금)할 것이다.=> 잔액은 25000원이됨.
 		//==> 이 스레드는 단일 스레드이기 때문에 홍길동이 입금할때 입꺽정이나 전우치가 동시에 입금할 수 없음.
 		*/
 		
@@ -37,8 +37,8 @@ public class AccountUserApp {
 		//⇒ 다른 스레드가 이미 메소드를 호출하여 실행중인 경우, 스레드를 일시중지하여 기존 스레드의 메소드 처리가 끝난 후 일시 중지된 스레드가 실행되도록 락(Lock) 기능 제공
 		
 //		<스레드 동기화 처리방법>
-//		1. 메소드를 수정할 수 있을 때 사용하는 방법
-//		⇒ synchronized 키워드 사용하여 메소드를 선언해 준다. (= 동기화 메소드(Synchronized Method)) 
+//		1. 메소드를 수정할 수 있을 때 사용하는 방법 (= 동기화 메소드(Synchronized Method)만드는 방법) 
+//		⇒ synchronized 키워드 사용하여 메소드를 선언해 준다. 
 //		- 형식)  접근제한자 synchronized 반환형 메소드명(자료형 매개변수, …){ 명령; ///}
 //		2. 메소드를 수정할 수 없을 때 사용하는 방법
 //		⇒ synchronized 키워드로 블럭을 설정하여 메소드 호출

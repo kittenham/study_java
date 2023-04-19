@@ -36,11 +36,14 @@ public class AccountUser extends Thread{
 	public void run() {
 //		account.deposit(5000, getUserName()); //입금
 //		account.withDraw(5000, getUserName()); //출금 => 이렇게 하면 엉망진창
+		//프로그램 개발자에 의해 생성된 스레드로 run() 메소드를 호출하여 명령 실행
+		// => 은행계좌 사용자가 사용하는 은행계좌에 입금 처리하는 메소드 호출
+		//account.deposit(userName, 5000);
 		
 		synchronized (account) {
-			
+			account.withDraw(5000, userName);
 		}
-		
+		//이 메소드가 실행될때 다른 메소드가 실행될 수 없도록 rock 걸어줌.
 		
 	}
 	

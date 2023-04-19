@@ -13,7 +13,7 @@ public class WrapperApp {
 		System.out.println("합계 = "+num3);
 		*/
 		
-		//이렇게 만들어 줄수있음(자바의 객체지향대로라면 이렇게 쓰는게 정석.
+		//원시형 대신, ▼이렇게 만들어 줄수있음(자바의 객체지향대로라면 이렇게 쓰는게 정석.
 		//but, 너무 길고 불편해서 원시형을 사용하는 경우가 더 多)
 		//Integer 클래스 : 정수값(int)을 저장하기 위한 클래스
 //		Integer num1=new Integer(100);	//버전9부터 없어질 예정이라는 경고가 뜸. 따라서 아래것 사용.
@@ -31,6 +31,7 @@ public class WrapperApp {
 		//=> 이렇게 사용하는데도 에러가 안나옴.(Wrapper클래스만 가능) 이유는,오토박싱 때문.
 		//=> Wrapper 클래스는 오토박싱과 오토언박싱 기능을 제공받아 객체를 생성하거나 사용가능
 		//=> new 연산자 사용할 필요X
+		//사용이유 : 일반 자료형처럼 값저장도 가능 + 저장된 값에 대한 Integer 메소드도 호출할 수 있기 때문에. 선호하는 편.
 		//오토박싱(AutoBoxing) : 원시형 리터럴(값)을 JVM이 자동으로 Wrapper 클래스의 객체로 생성하여 반환하는 기능
 		//오토언박싱(AutoUnboxing) : JVM이 Wrapper 클래스에 저장된 값을 원시형 리터럴로 반환하는 기능 
 		
@@ -68,7 +69,7 @@ public class WrapperApp {
 		String str1="100", str2="200";
 		System.out.println("합계 = "+(str1+str2)); //문자열 결합. 300으로 나오지 않음.
 		
-		//Integer.parseInt(String s) : 매개변수로 문자열을 전달받아 정수값으로 변환하여 반환하는 메소드
+		//Integer.parseInt(String s) : 매개변수로 문자열을 전달받아 정수값(숫자)으로 변환하여 반환하는 메소드
 		//=> 정수값으로 변환되지 못하는 문자열이 전달된 경우, NumberFormatException이 발생할 수 있다.
 		//=> 얘는 예외처리 하는 것을 권장.
 		System.out.println("합계 = "+(Integer.parseInt(str1)+Integer.parseInt(str2))); //문자열 결합. 300으로 나오지 않음.

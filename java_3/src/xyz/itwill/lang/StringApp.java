@@ -109,7 +109,7 @@ public class StringApp {
 		System.out.println("==============================================================");
 		
 		//String.indexOf(String str) : String 객체에 저장된 문자열에서 매개변수로 전달받은 문자열(문자)을 처음부터 차례대로 검색하여 시작위치값(첨자)를 반환하는 메소드
-		//=> 매개변수로 전달받은 문자열을 찾을 수 없는 경우 >> -1을 반환한다.
+		//=> 매개변수로 전달받은 문자열을 찾을 수 없는 경우 >> -1을 반환한다. (인덱스는 0부터 시작하니까 그 앞부터 반환받아야 차례로 검색할 수 있음)
 		System.out.println("A 문자열의 저장 위치 = "+str5.indexOf("A"));
 		System.out.println("A 문자열의 저장 위치 = "+str5.indexOf("EFG"));
 		System.out.println("A 문자열의 저장 위치 = "+str5.indexOf("X"));
