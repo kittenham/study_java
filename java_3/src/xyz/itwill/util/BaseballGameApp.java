@@ -21,8 +21,7 @@ public class BaseballGameApp {
 		//0~9 범위의 정수값 3개를 저장하기 위한 배열 선언 - 난수값을 배열요소에 저장
 		int[] dap = new int[3];
 		
-		//0~9 범위의 정수값 3개를 저장하기 위한 배열 선언 - 난수값을 배열요소에 저장
-		int[] num = new int[3];
+
 		
 		//while 나오는 이유 : 0~9 범위의 3개의 범수값으로 서로 다르며 0으로 시작불가능한 것인지 올바른 값인지 검증하기 위해
 		//규칙에 맞는 난수값을 배열요소에 저장되도록 처리하기 위한 반복문 (따라서, 정상적일때 break 처리해서 나가야함)
@@ -35,6 +34,16 @@ public class BaseballGameApp {
 		}
 		
 		Scanner sc = new Scanner(System.in);
+
+		
+		//0~9 범위의 정수값 3개를 저장하기 위한 배열 선언 - 입력값을 배열요소에 저장
+		int[] num = new int[3];
+		
+		//정답 관련 상태정보를 저장하기 위한 변수 선언
+		// => false : 정답을 못맞춘 상태, true : 정답을 맞춘 상태
+		boolean result=false;
+
+		
 		
 		//키보드로 정수값을 입력받아 비교 처리하는 기회를 제공하기 위한 반복문
 		for(int cnt=1;cnt<=15;cnt++) {
@@ -44,7 +53,7 @@ public class BaseballGameApp {
 			
 			loop:
 			while(true) {
-				System.out.println(cnt+"번째 입력 >> ");
+				System.out.print(cnt+"번째 입력 >> ");
 				String input = sc.nextLine();
 				
 				if(input.length()!=3){	//비정상적인 값이 입력된 경우(이경우에는 3글자를 입력하지 않았을 경우임)
@@ -70,15 +79,40 @@ public class BaseballGameApp {
 				
 				if(num[0]!=0 && num[0]!=num[1] && num[1]!=num[2] && num[2]!=num[0]) break;
 				System.out.println("[에러] 0으로 시작되거나 중복된 숫자가 존재합니다.");
-
-				
+	
 			}
+			
+			//난수값과 키보드입력값을 비교하여 스트라이크와 볼을 구분하여 계산하는 반복문.
+			//=> 난수값이 저장된 배열의 요소값과 입력값이 저장된 배열의 요소값을 교차 비교할 수 있도록 한다.
+			for(int i=0;i<dap.length;i++) {	//난수값이 저장된 배열요소를 처리하기 위한 반복문
+				for(int j=0;j<num.length;j++) { //입력값이 저장된 배열요소를 처리하기 위한 반복문
+					if(dap[i]==num[j]) {	//요소값이 같은 경우
+						if(i==j) {	//위치값이 같은 경우
+							strike++;	//요소값(숫자)도 같고 위치값도 같으면 스트라이크 증가
+						}else {ball++;	//요소값(숫자)은 같지만 위치값이 다르면 볼 증가
+						}
+					}
+				}
+			}
+			
+			//처리 결과 출력
+			if(strike==3) {
+				System.out.println("[메세지] 축하합니다."+cnt+"번 만에 맞췄습니다.");
+				break;
+			}
+			System.out.println("[결과]"+strike+"스트라이크"+ball+"볼");	
 		}
 		
+		if(!result) {//정답을 맞추지 못한 경우
+			System.out.print("[메세지] 정답을 못 맞췄군요. 정답은 [");
+			for(int su : dap) {
+				System.out.print(su);
+			}
+			System.out.println("] 입니다.");
+		}
 		
+		sc.close();
+			
 	}
 	
-	
-	
-
 }
