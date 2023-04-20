@@ -14,7 +14,7 @@ public class SimpleDateFormatApp {
 	public static void main(String[] args) {
 		
 		//Date → String 객체로 바꿔보자
-		Date now = new Date();
+		Date now = new Date(); //시스템의 현재 날짜와 시간 저장
 		
 		//SimpleDateFormat 클래스로 객체를 생성하기 위한 매개변수에 날짜와 시간에 대한 패턴정보를
 		//문자열로 전달받아 객체로 생성하는 생성자를 사용

@@ -35,10 +35,10 @@ public class DateApp {
 		
 		//Date.getTime() : Date 객체에 저장된 날짜와 시간에 대한 타임스템프를 반환하는 메소드.
 		//타임스템프(TimeStamp) : 1970년 1월 1일을 기준으로 1ms 마다 1씩 증가된 정수값
-		//=> 날짜와 시간을 정수값(long)으로 표현하여 연산 처리하기 위해 사용.
+		//=> 날짜와 시간을 정수값(long)으로 표현하여 연산 처리하기 위해(목적) 사용.
 //		long currentTime = now.getTime();
 		long currentTime = System.currentTimeMillis();	//위와 같은 결과값. 현재에 대한 시간(타임스템프)은 얘를 더 많이 씀.※※※중요!
-		
+		//ms : 1000분의 1초 단위
 		
 		Date wantDate = new Date(100,0,1);	//Date객체를 만드는데(년, 월, 일) 저장 (쓰는 것 권장X)
 		//=>[2000년, 1월, 1일, 0시, 0분, 0초]가 저장된 Date 객체 생성됨
@@ -47,6 +47,7 @@ public class DateApp {
 		long wantTime = wantDate.getTime();
 		
 		System.out.println("연산결과(일) = "+(currentTime-wantTime)/(1000*86400));
+		//currentTime-wantTime : 지나간 날짜 수
 		
 	}
 

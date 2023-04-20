@@ -30,7 +30,7 @@ public class DayCalculateApp {
 			
 		}
 		*/
-		System.out.print("생년월일을 입력하세요. [ex.2000-01-01] >> ");
+		System.out.print("생년월일을 입력하세요. ex.2000-01-01 >> ");
 		String birth = sc.next();
 		
 		long currentTime = System.currentTimeMillis();

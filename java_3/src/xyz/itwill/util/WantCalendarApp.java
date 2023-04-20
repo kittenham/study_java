@@ -27,10 +27,10 @@ public class WantCalendarApp {
 		calendar.set(year, month-1, 1);
 		//입력받은 월은 0부터 1월시작이니까 -1 해야하고, 날은 1일로 세팅한다.
 		
-		int week = calendar.get(Calendar.DAY_OF_WEEK);
-		System.out.println("week = "+week);
+		int week = calendar.get(Calendar.DAY_OF_WEEK);	//Calendar에서 day(요일) 반환받기
 		
-		System.out.println("              "+calendar.get(Calendar.YEAR)+"년"+(calendar.get(Calendar.MONTH)+1)+"월");
+//		System.out.println("              "+calendar.get(Calendar.YEAR)+"년"+(calendar.get(Calendar.MONTH)+1)+"월");
+		System.out.println("              "+year+"년"+month+"월");	//위 코드와 출력값 같음.
 		System.out.println("========================================");
 		System.out.println("    일   월   화   수   목   금   토    ");
 		System.out.println("========================================");
