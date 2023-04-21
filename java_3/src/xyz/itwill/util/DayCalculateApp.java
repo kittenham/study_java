@@ -1,5 +1,7 @@
 package xyz.itwill.util;
 
+//>> 내가 작성한 식. 망함ㅋ 다시 생각해보기.
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +12,7 @@ import java.util.Scanner;
 //1. 생년월일 입력 [ex. 2000-01-01] >> [2023-04-18]	(date클래스사용)
 //	 [결과] 태어난지 [1일]이 지났습니다. (타임스템프, -> 1로 바꿔주면됨)
 //2. 형식에 맞지않은 생년월일을 입력한 경우 에러메세지 출력 후 프로그램 종료 (date, simpledateformat)
+
 public class DayCalculateApp {
 //????
 	public static void main(String[] args) {
@@ -35,7 +38,7 @@ public class DayCalculateApp {
 		
 		long currentTime = System.currentTimeMillis();
 		
-		Date birthDate = new Date()
+		Date birthDate = new Date();
 		
 		
 		sc.close();
@@ -46,7 +49,7 @@ public class DayCalculateApp {
 		
 		//문자열로 입력된 걸 시간으로 바꿔서 계산해야함. (String -> Date)
 		//생년월일 저장변수
-		
+	/*	
 		try {
 			Date birthDate = birthFormat.parse(birth); 
 		} catch(ParseException e) {
@@ -56,7 +59,7 @@ public class DayCalculateApp {
 		
 		long currentTime = System.currentTimeMillis();
 		
-	
+	*/
 		
 		
 		

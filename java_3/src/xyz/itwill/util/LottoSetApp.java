@@ -20,7 +20,7 @@ public class LottoSetApp {
 			//=> Set 객체에는 동일한 객체를 요소로 저장 불가.
 			lottoset.add(random.nextInt(45)+1);
 			if(lottoset.size()==6) break;	//Set 객체에 저장된 요소의 갯수가 6인 경우 반복문 종료
-		}	//정렬을 할 수 없어서 다른 걸로 만들어줘야함.
+		}	//정렬을 할 수 없어서 다른 걸로 만들어줘야함.(가장 큰 단점)
 		
 		//Set.toArray(E[] a) : Set 객체에 저장된 모든 요소값(객체)를 매개변수로 전달반은 배열요소에 저장하는 메소드(= Set 객체를 배열로 변환)
 		Integer[] lotto = lottoset.toArray(new Integer[0]);

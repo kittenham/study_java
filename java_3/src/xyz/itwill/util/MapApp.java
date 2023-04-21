@@ -19,7 +19,7 @@ public class MapApp {
 		Map<String, String> map = new HashMap<String, String>(); 
 		
 		//Map.put(K key, V value) : Map 객체에 엔트리를 추가하는 메소드 (여기는add가 아니라 put 써야함!)
-		//=> Map 객체에 저장되는 엔트리는 이름(Key)을 Set 객체로 저장(내부적으로) 
+		//=> Map 객체에 저장되는 엔트리는 이름(Key)을 Set 객체로 저장(내부적으로. 따라서 중복 저장X. 저장 순서도X) 
 		//-> Key(이름)은 절대 중복되어 저장되지 않는다!(중복되면 내가 원하는 값을 찾을 수 없으니까. key는 내가 원하는 값을 찾으려고 있는것.)
 		//-> 객체는 중복 가능
 		map.put("1000", "홍길동");
@@ -35,7 +35,7 @@ public class MapApp {
 		
 		System.out.println("=========================================================================");
 		
-		//Map.put(K key, V value) 메소드 호출시 이름(Key)이 중복되면 해당이름의 엔트리의 객체(Value)를 변경하여 저장한다.
+		//*Map.put(K key, V value) 메소드 호출시 이름(Key)이 중복되면 해당이름의 엔트리의 객체(Value)를 변경하여 저장한다.
 		//따로 변경메소드가 없음.
 		//=> put은 저장과 변경 두가지 역할 모두 가능.
 		map.put("2000", "임걱정");
@@ -50,17 +50,17 @@ public class MapApp {
 		
 		System.out.println("=========================================================================");
 		
-		//Map.get(K key) : Map 객체에 저장된 엔트리에서 매개변수로 전달받은 이름(Key)에 대한 엔트리를 검색하여 엔트리의 객체를 반환하는 메소드
-		//=> 이름(Key)에 대한 엔트리가 없는 경우 null 반환
+		//*Map.get(K key) : Map 객체에 저장된 엔트리에서 매개변수로 전달받은 이름(Key)에 대한 엔트리를 검색하여 엔트리의 객체를 반환하는 메소드
+		//=> 이름(Key)에 대한 엔트리가 없는 경우 null 반환됨.
 		String name = map.get("1000");
 		System.out.println("name = "+name);
 		
 		System.out.println("=========================================================================");
 		
-		//map.keySet() : Map 객체에 저장된 모든 엔트리의 이름(Key)을 Set객체로 반환하는 메소드
+		//map.keySet() : Map 객체에 저장된 모든 엔트리의 이름(Key)만 Set객체로 반환하는 메소드
 		Iterator<String> iteratorKey = map.keySet().iterator();	
 		
-		//Map.values() : Map 객체에 저장된 모든 엔트리의 객체(Value)을 Collection 객체(List 객체)로 반환하는 메소드
+		//Map.values() : Map 객체에 저장된 모든 엔트리의 객체(Value)만 Collection 객체(List 객체)로 반환하는 메소드
 		Iterator<String> iteratorValue = map.values().iterator();
 		
 		//방법1
