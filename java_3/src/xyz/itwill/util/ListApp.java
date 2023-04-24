@@ -7,8 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 
 //List 인터페이스를 상속받은 콜렉션 클래스 - ArrayList(동기화X), Vector(동기화O), LinkedList 등
-//=> List 객체는 요소를 차례대로 저장(= *순서가 존재한다.*)
-//=> 첨자(index. 0부터 1씩 증가)를 이용하여 요소를 구분해 처리가능.
+//(장점) List 객체는 요소를 차례대로 저장(= *순서가 존재한다.*)
+//=> 첨자(index. 0부터 1씩 증가)를 이용하여 요소를 구분해 처리가능.(요소에 접근해 처리가능)
 //다중스레드를 사용할때는 Vector를 쓰는게 좋지만, 웹은 다중스레드가 크게 필요가 없어서 속도가 더 빠른 ArrayList를 더 많이 사용함.
 //(단점) List 객체에 저장된 요소를 검색하는 속도가 느림(비효율적).
 
@@ -19,7 +19,7 @@ public class ListApp {
 		List<String> list = new ArrayList<String>();
 		
 		//List.add(E element) : List 객체에 요소를 추가하는 메소드
-		//=>List 객체에 요소가 차례대로 저장됨. 요소에 순서가 있음.(Set 인터페이스과 다름)
+		//=> List 객체에 요소가 차례대로 저장됨. 요소에 순서가 있음.(Set 인터페이스과 다름)
 		list.add("홍길동");
 		list.add("임꺽정");
 		list.add("전우치");
@@ -49,6 +49,7 @@ public class ListApp {
 		System.out.println("========================================================================");
 		
 		//*List.add(int index, E element) : List 객체에서 index 위치에 요소를 삽입하는 메소드 
+		//=> 원하는 위치에 삽입 가능.
 		list.add(4, "장길산");	//5번째 위치에 장길산을 삽입해라.
 		System.out.println("list = "+list);
 		
