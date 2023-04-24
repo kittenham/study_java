@@ -1,6 +1,9 @@
 package xyz.itwill.swing;
 
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -41,23 +44,69 @@ public class PenguinMoveApp extends JFrame{
 		//배경이미지 파일을 읽어 배경이미지를 필드에 저장 
 		backImage = new ImageIcon(getClass().getResource("/images/back.jpg")).getImage();
 		
-		//펭귄이미지파일을 읽어 필드(배열)요소에 저장
-		penguins = new Image[3];
-		for(int i=0; i<penguins.length;i++) {
-			penguins[i] = new ImageIcon(getClass().getResource("/image/penguin)"+(i+1)+".png"); 
+		//펭귄이미지 파일을 읽어 필드(배열) 요소에 저장
+		penguins=new Image[3];
+		for(int i=0;i<penguins.length;i++) {
+			penguins[i]=new ImageIcon(getClass().getResource("/images/penguin"+(i+1)+".gif")).getImage();
 		}
 		
-		//penguinNO=0;
+		//penguinNo=0;
 		
-		penquinX = 
+		//펭귄이미지가 출력될 좌표값을 계산하여 저장
+		penguinX=JFRAME_WIDTH/2-PENGUIN_SIZE/2;
+		penguinY=JFRAME_HEIGHT-PENGUIN_SIZE;
+		
+		setResizable(false);
+		
+		//프레임에서 키보드 관련 이벤트가 발생될 경우 이벤트 처리 객체를 사용하여 이벤트 처리
+		addKeyListener(new PenguinMoveHandle());
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		//setBounds(700, 200, 646, 461);
 		setBounds(700, 200, JFRAME_WIDTH, JFRAME_HEIGHT);
-		setVisible(true);
+		setVisible(true);		
 	}
 	
 	public static void main(String[] args) {
 		new PenguinMoveApp("펭귄 이동");
 	}
+	
+	@Override
+	public void paint(Graphics g) {
+		//Graphics.drawImage(Image image, int x, int y, int width, int height, ImageObserver observer)
+		// => 이미지를 출력하는 메소드
+		g.drawImage(backImage, 0, 0, JFRAME_WIDTH, JFRAME_HEIGHT, this);
 
+		g.drawImage(penguins[penguinNo], penguinX, penguinY, PENGUIN_SIZE, PENGUIN_SIZE, this);
+	}
+	
+	public class PenguinMoveHandle extends KeyAdapter {
+		//키보드를 누르고 있는 경우 호출되는 메소드
+		@Override
+		public void keyPressed(KeyEvent e) {
+			//KeyEvent.getKeyCode() : 이벤트가 발생된 키보드의 고유값을 반환하는 메소드
+			int keyCode=e.getKeyCode();
+			
+			switch(keyCode) {
+			case KeyEvent.VK_LEFT:
+				penguinX-=10;
+				if(penguinX<=0) {
+					penguinX=0;
+				}
+				penguinNo++;
+				penguinNo%=3;
+				repaint();
+				break;
+			case KeyEvent.VK_RIGHT:
+				penguinX+=10;
+				if(penguinX>=JFRAME_WIDTH-PENGUIN_SIZE) {
+					penguinX=JFRAME_WIDTH-PENGUIN_SIZE;
+				}
+				penguinNo++;
+				penguinNo%=3;
+				repaint();
+				break;
+			}
+		}
+	}
 }
