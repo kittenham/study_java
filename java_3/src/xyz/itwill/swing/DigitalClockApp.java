@@ -28,6 +28,7 @@ public class DigitalClockApp extends JFrame{
 	
 	//날짜와 시간을 변경하는 스레드의 실행상태를 저장하기 위한 필드
 	// => false : 스레드 중지상태,  true : 스레드 동작상태 (-> 버튼을 누를때 상태를 바꿔주면됨)
+	//스레드는 최대한 변경하지 않는 것이 좋음.
 	private boolean isRun;
 	
 	public DigitalClockApp(String title) {
@@ -61,7 +62,7 @@ public class DigitalClockApp extends JFrame{
 		getContentPane().add(clockLabel, BorderLayout.CENTER);
 		getContentPane().add(jPanel, BorderLayout.SOUTH);
 		
-		//스레드 클래스로 객체를 생성하여 새로운 스레드를 생성해 run() 메소드의 명령을 실행
+		//스레드 클래스로 객체를 생성하여 새로운 스레드를 생성해 run() 메소드의 명령을 실행 (밑에 메인스레드말고 스레드 메소드를 다 만들면 여기 객체 생성해서 실행하도록 해야함)
 		new ClockThread().start();
 		
 		//컴퍼넌트에서 이벤트가 발생될 경우 이벤트 처리 객체를 제공받아 이벤트 처리

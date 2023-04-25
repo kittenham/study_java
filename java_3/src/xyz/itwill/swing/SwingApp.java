@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 
 //이벤트처리는 JVM이 알아서 하는것~
 
-//javax.swing 패키지의 클래스를 이용하여 GUI 프로그램을 작성하는 방법 - AWT와 다른점
+//javax.swing 패키지의 클래스를 이용하여 GUI 프로그램을 작성하는 방법 - AWT와 다른점 (둘은 컴퍼넌트만 다르고 나머지는 거의비슷)
 //1. java.awt 패키지의 컴퍼넌트 또는 컨테이너 관련 클래스 대신 javax.swing 패키지의 컴퍼넌트와 컨테이너를 사용하여 UI 구현
 // => AWT 컴퍼넌트(컨테이너) 관련 크래스 이름 앞에 J(대문자)를 붙이면 SWING 컴퍼넌트와 동일 
 //2. 프레임의 [닫기]를 누른 경우 동작되는 기능을 기본적으로 제공
@@ -91,7 +91,7 @@ public class SwingApp extends JFrame{
 				jTextArea.append("[홍길동]"+text+"\n");
 				
 				//jTextArea.setCaretPosition(int position) : JTextArea 컴퍼넌트의 스크롤을 이동하는 메소드
-				jTextArea.setCaretPosition(jTextArea.getText().length());	//스크롤을 맨 하단으로 이동하게 만들어줌.
+				jTextArea.setCaretPosition(jTextArea.getText().length());	//스크롤을 맨 하단으로 이동하게 만들어줌. 이거 안하면 스크롤이 맨 아래로 내려가지 않음.
 				
 				//TextComponenet.setText(String text) : JTextField 컴퍼넌트 또는 JTextArea 
 				//컴퍼넌트에 입력된 문자열을 변경하는 메소드

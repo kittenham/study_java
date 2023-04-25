@@ -21,7 +21,7 @@ public class PaintApp extends JFrame{
 	public PaintApp(String title) {
 		super(title);
 		
-		//프레임에서 마우스 관련 이벤트가 발생될 ㅣ경우 이벤트 처리 객체로 이벤트 처리되도록 등록
+		//프레임에서 마우스 관련 이벤트가 발생될 경우 이벤트 처리 객체로 이벤트 처리되도록 등록
 		//=> MouseAdapter클래스를 상속받은 익명의 내부 클래스를 사용하여 이벤트 처리 객체 생성
 		addMouseListener(new MouseAdapter() {
 			@Override
@@ -31,7 +31,7 @@ public class PaintApp extends JFrame{
 				x=e.getX();
 				y=e.getY();
 				
-				//paint() 메소드를 수동으로 호출하는 메소드
+				//**paint() 메소드를 수동으로 호출하는 메소드
 				repaint();
 			}
 		});

@@ -46,7 +46,7 @@ public class EventHandleApp extends Frame {
 		exit.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		add(exit);
 		
-		//이벤트 컴퍼넌트에 이벤트 처리 객체 등록하기
+		//이벤트 컴퍼넌트에 이벤트 처리 객체 등록하기(--Listener사용)
 		//=> Button 컴퍼넌트에서 ActionEvent가 발생될 경우 EventHandle 클래스의 객체를 제공받아 이벤트처리 할 수 있도록 한다.
 		exit.addActionListener(new EventHandle());
 		
@@ -67,7 +67,7 @@ public class EventHandleApp extends Frame {
 // => Button 컴퍼넌트에서 발생된 ActionListener를 처리하기 위한 클래스
 class EventHandle implements ActionListener {
 	
-	//이벤트 처리 명령을 작성하기 위한 메소드임. JVM이 알아서 호출함.
+	//오버라이드 메소드가 이벤트 처리 명령을 작성하기 위한 메소드임. JVM이 알아서 호출함.
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		System.exit(0);

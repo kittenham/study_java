@@ -63,5 +63,6 @@ public class WindowListenerApp extends Frame {
 			//System.out.println("windowDeactivated 메소드 호출");
 		}
 		
+		
 	}
 }
