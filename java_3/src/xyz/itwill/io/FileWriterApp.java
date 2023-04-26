@@ -25,7 +25,7 @@ public class FileWriterApp {
 		int readByte;
 		
 		while(true) {
-			readByte=in.read();
+			readByte=in.read(); //키보드 입력값을 문자데이터로 읽어서 변수에 저장.
 			
 			if(readByte==-1) break;
 			

@@ -13,7 +13,8 @@ import java.io.IOException;
 
 
 //키보드로 원시데이터(1Byte)를 입력받아 모니터에 전달하여 출력하는 프로그램 작성
-//=> EOF(End Of File : 입력종료 - Ctrl+Z) 신호를 입력하면 프로그램 종료(MAC 에서는 Ctrl+D)
+//=> EOF(End Of File : 입력종료 - Ctrl+Z) 신호를 입력하면 프로그램 종료(MAC 에서는 Ctrl+D), 자바에서는 EOF 값(상수)를 "-1"로 취급.
+
 public class ByteStreamApp {
 	public static void main(String[] args) throws IOException {
 		System.out.println("[메세지] 키보드를 눌러 값을 입력해 주세요.[프로그램 종료 : Ctrl+Z]");

@@ -13,9 +13,10 @@ public class FileOuputStreamApp {
 		//FileOutputStream 클래스 : 파일에 원시데이타를 전달하기 위한 출력스트림을 생성하기 위한 클래스
 		//=> FileOutputStream 클래스의 FileOutputStream(String name) 생성자로 이용하여 매개변수로 파일경로를 전달받아
 		//	파일 출력스트림을 생성한다.
-		//=>> 매개변수로 전달받은 파일경로의 파일이 없는경우, FileNotFoundException 발생 할 수 있음. => 예외처리 필요함.
-		//=> 예외처리하지않고 예외를 전달할 경우 매개변수로 전달받은 파일경로의 파일을 생성하여 자동으로 출력스트림을 
-		//	제공한다.
+		//=>> 매개변수로 전달받은 파일경로의 파일이 없는경우, FileNotFoundException 발생 할 수 있음.
+		//		[(파일이 없어서 스트림을 못만드니까) => 예외처리 필요함.]
+		//=> 예외처리하지않고 예외를 전달할 경우 매개변수로 전달받은 파일경로의 파일을 JVM이 자동으로 생성하여 자동으로 
+		//출력스트림을 제공한다.
 		//=>> 매개변수로 전달받은 파일경로의 파일이 있는경우, 기존 파일의 내용 대신 새로운 내용이 파일에 저장된다.(덮어씌우기(OverWrite))
 		
 		FileOutputStream out = new FileOutputStream("c:/data/byte.txt");

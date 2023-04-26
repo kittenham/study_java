@@ -15,9 +15,10 @@ public class FileCopyCharApp {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader in = null;
-			//BufferedReader 클래스 : Reader 객체를 전달받아 대량의 문자데이터를 읽기 위한 입력스트림을 생성하기 위한 클래스
+			//BufferedReader 클래스 : Reader 객체를 전달받아 *대량의 문자데이터를 읽기 위한 입력스트림을 생성하기 위한 클래스
+			//=> 대량의 문자데이터를 처리할때는 FileReader/Writer쓰는 것보다 BufferedReader/Writer를 쓰는게 속도가 훨씬 빠르다.
 		BufferedWriter out = null;
-			//BufferedWriter 클래스 : Reader 객체를 전달받아 대량의 문자데이터를 전달하기 위한 출력스트림을 생성하기 위한 클래스
+			//BufferedWriter 클래스 : Reader 객체를 전달받아 *대량의 문자데이터를 전달하기 위한 출력스트림을 생성하기 위한 클래스
 				
 		try {
 			in = new BufferedReader(new FileReader("c:/data/BANDIZIP.EXE"));

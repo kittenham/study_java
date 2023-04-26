@@ -18,6 +18,6 @@ public class DataInputStreamApp {
 		
 		String value3 = in.readUTF();
 			//DataInputStream.readUTF() : 입력스트림으로 원시데이타를 읽어 문자열로 반환하는 메소드
-		
+			
 	}
 }

@@ -6,7 +6,7 @@ import java.io.IOException;
 //File 클래스 : 파일 관련 정보를 저장하기 위한 클래스 (+디렉토리(폴더)도 저장가능)
 public class FileApp {
 	public static void main(String[] args) throws IOException {
-		File fileOne = new File("c:\\data");
+		File fileOne = new File("c:\\data");//ㄱ
 			//File 클래스의 File(String pathname) 생성자를 이용하여 매개변수로 전달받은 시스템(OS;운영체제)의 
 			//파일경로를 전달받아 File 객체 생성
 			//=> 파일경로 : 시스템에 존재하는 파일 위치를 표현하는 방법 - 절대경로 표현방법, 상대경로 표현방법
