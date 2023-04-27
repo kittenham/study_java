@@ -1,6 +1,5 @@
 package xyz.itwill.net;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,10 +19,13 @@ public class EchoServerApp {
 				Socket socket = echoserver.accept();
 				
 				//메세지를 제공받아보자
-				new BufferedReader(new InputStreamReader(socket.getInputStream())); 
-					//1. 원시데이터(getInputStream)를 문자데이터를 받을 수 있도록 확장(InputSteamReader)
+				BufferedReader in= new BufferedReader(new InputStreamReader(socket.getInputStream())); 
+					//1. 소켓의 입력스트림(원시데이터(getInputStream))을 문자데이터를 받을 수 있도록 확장(InputSteamReader)
 					//2. 대량의 문자 데이터를 읽을 수 있는 입력스트림으로 다시한번 더 확장(BufferedReader)
 				
+				System.out.println("["+socket.getInetAddress().getHostAddress()+"]님이 보내온 메세지 = "+in.readLine());
+				
+				socket.close(); //다 썼으면 끝내기.
 			}
 			
 		} catch (IOException e) {
