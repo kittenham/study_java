@@ -65,7 +65,7 @@ public class MultiThreadApp {
 		
 		
 		for(char i='A';i<='Z';i++);{
-			System.out.print(i);
+			System.out.print('i');	//i를 'i'로 고쳐줬더니 정상 실행됨. char였으므로.
 			//Thread.sleep(long ms) : 매개변수로 전달된 시간(ms)동안 스레드가 일시중지된다.
 			//=> 메소드에서 InterruptedException 발생(일반예외) -> 예외처리를 하지않으면 에러가 발생한다.-> 컴파일이 안되어서 실행이 안됨.
 			Thread.sleep(500);	

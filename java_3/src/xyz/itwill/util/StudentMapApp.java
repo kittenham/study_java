@@ -21,9 +21,10 @@ public class StudentMapApp {
 		studentListTwo.add(new Student(8000, "신동엽"));
 		studentListTwo.add(new Student(9000, "김용만"));
 		
-		Map<Integer, List<String>> studentListMap = new HashMap<>();
+		Map<Integer, List<Student>> studentListMap = new HashMap<>();
 		studentListMap.put(1, studentListOne);
 		studentListMap.put(2, studentListTwo);
+
 		
 		for(Integer ban : studentListMap.keySet()) {
 			System.out.println(ban+"반의 학생정보 >>");
