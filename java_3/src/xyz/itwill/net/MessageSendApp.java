@@ -45,3 +45,4 @@ public class MessageSendApp {
 		System.out.println("[결과] 연결 컴퓨터에게 메세지를 보냈습니다.");
 	}
 }
+//DatagramSocket은 딱 보내는 역할만 함. DatagramPacket이 보내는 정보를 가지고 보낸다.
