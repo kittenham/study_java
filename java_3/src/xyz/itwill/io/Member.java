@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class Member implements  Serializable {	//Member 클래스는 객체직렬화 클래스를 상속받은것.
 	
 	//객체직렬화 클래스는 클래스를 구분하기 위한 고유값이 저장된 serialVersionUID 필드를 선언하는 것을 권장
-	//-필드의 자료형은 long으로 설정하고 static과 final 제한자 사용
+	//-필드의 자료형은 long으로 설정하고 static과 final 제한자 사용 (serialVersionUID 필드가 상수라는 것을 의미)
 	//=> 이플립스에서는 고유값이 저장된 serialVersionUID 필드를 자동 생성하는 기능제공
 	private static final long serialVersionUID = -3306639107947980039L;
 

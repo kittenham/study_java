@@ -31,6 +31,7 @@ public class NotepadApp extends JFrame {
 	JMenuItem init, open, save, exit;
 	
 	//FileDialog클래스 : 파일을 선택하기 위한 다이얼로그를 생성하기 위한 클래스
+	//FileChooser클래스 : 파일을 선택하기 위한 다이얼로그를 생성하기 위한 컴퍼넌트 클래스
 	FileDialog openDialog, saveDialog;	//필드선언
 	
 	//현재작업중인 문서파일의 경로를 저장하기 위한 필드
