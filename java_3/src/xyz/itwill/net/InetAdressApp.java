@@ -67,9 +67,12 @@ public class InetAdressApp {
 	public static void main(String[] args) throws UnknownHostException {
 		
 		//InetAddress 클래스 : 네트워크 식별자(IP 주소 및 호스트 이름)을 저장하기 위한 클래스
+		//(네트워크를 할때 가장 기본적인 클래스)
 		//InetAddress.getLocalHost() : 현재 사용중인 컴퓨터의 네트워크 식별자가 저장된 InetAdress 객체를 반환하는 메소드
 		//=> UnkownHostException 발생(일반예외) : 호스트 이름의 컴퓨터를 검색할 수 없는 경우 발생되는 예외
 		//현재 사용중인 컴퓨터는 기본적으로 [127.0.0.1]의 IP주소가 제공되며 [localhost]라는 이름으로 호스트 이름(네트워크에서 사용하는 컴퓨터 이름) 설정
+		//이더넷 장치가 있으면  IP주소나 호스트 이름으로 사용.
+		
 		InetAddress myComputer = InetAddress.getLocalHost();
 		
 		//InetAddress.toString() : InetAddress객체에 저장된 네트워크 식별자를 문자열로 변환하여 반환하는 메소드

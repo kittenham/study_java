@@ -14,7 +14,7 @@ public class TimeServerApp {
 		
 		try {
 			//ServerSocket 객체 생성 : 포트를 활성화하여 클라이언트가 접속 할 수 있는 환경 제공
-			ntpServer = new ServerSocket(2000);	//2000번 포트 열기
+			ntpServer = new ServerSocket(2000);	//2000번 포트 열기//클라이언트는 2000반 포트로 서버에 접속가능해짐
 			
 			
 			//ServerSocket.toString() : ServerSocket 객체에 저장된 접속 관련 정볼르 문자열로 반환하는 메소드
@@ -54,7 +54,7 @@ public class TimeServerApp {
 				//▼한번에 정리해주기
 				new ObjectOutputStream(socket.getOutputStream()).writeObject(new Date());
 				
-				//로그처리- 기록
+				//로그처리- 기록☆
 				//Socket.getInetAddress() : 서버의 소켓과 연결된 외부 컴퓨터의 네트워크 식별자가 저장된 InetAddress 객체를 반환하는 메소드
 				System.out.println("[정보] 클라이언트["+socket.getInetAddress()+"]에게 날짜와 시간을 제공하였습니다.");
 				
